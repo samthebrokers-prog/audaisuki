@@ -1,4 +1,4 @@
-const navItems = [
+import LanguageSwitcher from "./LanguageSwitcher";\n\nconst navItems = [
   { ja: "ホーム", en: "Home", href: "#top" },
   { ja: "仕事", en: "Jobs", href: "#classifieds" },
   { ja: "住まい", en: "Housing", href: "#classifieds" },
@@ -257,7 +257,7 @@ export default function Home() {
       <header id="top">
         <div className="utility">
           <span>🇯🇵 Japan × Australia 🇦🇺</span>
-          <span className="utilityRight"><span className="languageLabel">日本語 + English</span><span className="utilitySep">｜</span><a className="loginLink" href="/login">ログイン / Login</a></span>
+          <span className="utilityRight"><LanguageSwitcher/><span className="utilitySep">｜</span><a className="loginLink" href="/login">ログイン / Login</a></span>
         </div>
 
         <div className="brandRow">
@@ -271,8 +271,8 @@ export default function Home() {
         <nav aria-label="Main navigation">
           {navItems.map((item) => (
             <a key={item.ja} href={item.href}>
-              <b>{item.ja}</b>
-              <small>{item.en}</small>
+              <b className="jaOnly">{item.ja}</b>
+              <small className="enOnly">{item.en}</small>
             </a>
           ))}
         </nav>
@@ -288,8 +288,8 @@ export default function Home() {
           <div className="heroCopy">
             <div className="eyebrow">日本人のオーストラリア生活を、もっと身近に。 / Australia, closer to Japan.</div>
             <h1>暮らす。働く。<br/>食べる。つながる。</h1>
-            <p className="jp">仕事、住まい、生活サービス、日本食、コミュニティ、そして大使館・領事館からの公式情報まで。</p>
-            <p className="en">Jobs, housing, Japanese-speaking services, food, community and official Embassy & Consulate information — all in one place.</p>
+            <p className="jp jaOnly">仕事、住まい、生活サービス、日本食、コミュニティ、そして大使館・領事館からの公式情報まで。</p>
+            <p className="en enOnly">Jobs, housing, Japanese-speaking services, food, community and official Embassy & Consulate information — all in one place.</p>
             <div className="heroActions">
               <a href="#businesses" className="primary">日本語サービスを探す <span>Find Japanese services</span></a>
               <a href="#embassy" className="secondary">大使館・領事館 <span>Official contacts</span></a>
@@ -376,8 +376,8 @@ export default function Home() {
                 </div>
                 <h3>{business.name}</h3>
                 <p className="place">📍 {business.place}</p>
-                <p className="jp">{business.ja}</p>
-                <p className="en">{business.en}</p>
+                <p className="jp jaOnly">{business.ja}</p>
+                <p className="en enOnly">{business.en}</p>
                 <div className="links">
                   <a href={business.web} target="_blank" rel="noreferrer">Website ↗</a>
                   {"instagram" in business && business.instagram ? <a href={business.instagram} target="_blank" rel="noreferrer">Instagram ↗</a> : null}
