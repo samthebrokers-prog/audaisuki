@@ -80,3 +80,18 @@
 .hubDisclaimer{background:#fff8ed;border:1px solid #f0dfc3;border-radius:12px;padding:18px}.hubDisclaimer b{font-size:12px;color:#8a5a16}.hubDisclaimer p{font-size:10px;line-height:1.6;color:#6d5d45;margin:7px 0 0}
 @media(max-width:900px){.eventStrip{grid-template-columns:1fr 1fr}.eventStripTitle{grid-column:1/-1}.hubServiceGrid,.hubMissionGrid{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.newsSection .sectionHead{display:block}.officialMore{display:inline-block;margin-top:12px}.eventStrip{grid-template-columns:1fr}.eventStripTitle{grid-column:auto}.officialSourceLine{align-items:flex-start;flex-direction:column}.officialHubHeader{padding:15px 12px}.officialHubHeader>div span{display:none}.officialHubBrand{font-size:18px}.officialHubMain{padding:28px 10px 50px}.officialHubIntro{padding:25px 20px}.officialHubIntro h1{font-size:30px}.hubServiceGrid,.hubUpdateList,.hubEventGrid,.hubMissionGrid{grid-template-columns:1fr}.hubEvents{padding:20px 14px}.hubSectionHead{display:block}.hubSectionHead small{display:block;margin:0 0 12px}}
+
+.languageSwitcher{display:flex;gap:3px;align-items:center;background:#0d2945;border:1px solid #ffffff24;border-radius:999px;padding:2px}
+.languageSwitcher button{border:0;background:transparent;color:#c9d8e5;border-radius:999px;padding:4px 8px;font-size:10px;cursor:pointer}
+.languageSwitcher button:hover{color:#fff;background:#ffffff12}
+.languageSwitcher button.active{background:#fff;color:#143c68;font-weight:800}
+html[data-language="ja"] .enOnly{display:none!important}
+html[data-language="en"] .jaOnly{display:none!important}
+html[data-language="ja"] nav a,html[data-language="en"] nav a{padding-top:14px;padding-bottom:14px}
+html[data-language="ja"] .businessCard .jp,html[data-language="en"] .businessCard .en{display:block}
+@media(max-width:760px){
+  .utility{display:flex;justify-content:space-between;align-items:center;gap:8px;overflow-x:auto}
+  .utilityRight{display:flex!important;float:none;white-space:nowrap}
+  .languageSwitcher button{padding:4px 6px;font-size:9px}
+  .loginLink,.utilitySep{display:none}
+}
