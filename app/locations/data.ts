@@ -1,3 +1,10 @@
+export type Resource = {
+  name: string;
+  type: string;
+  description: string;
+  href: string;
+};
+
 export type Region = {
   slug: string;
   short: string;
@@ -11,6 +18,7 @@ export type Region = {
   consularArea: string;
   consularUrl: string;
   localBusinesses: Array<{name:string; type:string; place:string; href:string}>;
+  communityResources: Resource[];
   focus: string[];
 };
 
@@ -28,6 +36,11 @@ export const regions: Region[] = [
     consularArea: "ACT, NSW, NT, VIC, TAS, SA, QLD and WA",
     consularUrl: "https://www.au.emb-japan.go.jp/",
     localBusinesses: [],
+    communityResources: [
+      {name:"Japan Foundation Community Organisations Map",type:"全国ディレクトリ / National directory",description:"Japanese community groups, language schools, libraries, cultural organisations and other Japan-related resources across Australia.",href:"https://sydney.jpf.go.jp/japan-related-community-organisations-in-australia/"},
+      {name:"National Federation of Australia Japan Societies",type:"全国団体 / National network",description:"National network linking Australia–Japan societies and community activities across states and territories.",href:"https://austjapanfed.org.au/"},
+      {name:"Japanese Film Festival Australia",type:"文化 / Culture",description:"National Japanese film programme visiting major Australian cities.",href:"https://jffau.jpf.go.jp/"}
+    ],
     focus: ["Jobs across Australia","Housing by state","Japanese-speaking services","Japanese food & groceries","Events & community","Embassy & consular guidance"]
   },
   {
@@ -47,6 +60,11 @@ export const regions: Region[] = [
       {name:"Sumi Nails",type:"Nails / ネイル",place:"Sydney, NSW",href:"https://suminails.com/"},
       {name:"Genki Mart",type:"Grocery / 日本食材",place:"Sydney, NSW",href:"https://genkimart.com.au/"}
     ],
+    communityResources: [
+      {name:"Japan Club of Sydney (JCS)",type:"日本人会 / Community",description:"Non-profit Japanese community organisation with social activities, newsletters, cultural events and family support.",href:"https://www.japanclubofsydney.org/english/"},
+      {name:"JCS Japanese Schools",type:"教育 / Education",description:"Weekend Japanese schools serving children across Sydney, including City, Dundas and Edgecliff.",href:"https://www.japanclubofsydney.org/school/"},
+      {name:"Australia-Japan Society of NSW",type:"日豪交流 / Australia–Japan",description:"Business, social, cultural and language-exchange activities connecting Australian and Japanese communities in NSW.",href:"https://australiajapansocietyofnsw.org.au/"}
+    ],
     focus: ["Sydney jobs","Share housing","Japanese beauty","Japanese groceries","Community events","Sydney consular services"]
   },
   {
@@ -64,6 +82,11 @@ export const regions: Region[] = [
     localBusinesses: [
       {name:"ASSORT Melbourne",type:"Hair / 美容",place:"Collingwood, VIC",href:"https://au.assort-hair.com/"},
       {name:"KOMEYUI",type:"Restaurant / 日本食",place:"South Melbourne, VIC",href:"https://komeyui.com.au/"}
+    ],
+    communityResources: [
+      {name:"Japanese School of Melbourne",type:"教育 / Education",description:"Japanese school supporting primary and junior-high education for Japanese families in Melbourne.",href:"https://jsm.vic.edu.au/"},
+      {name:"Australia Japan Business Council of Victoria",type:"日豪交流 / Community & business",description:"Independent non-profit connecting business, education, culture and community across Victoria and Japan.",href:"https://ajbcv.com.au/"},
+      {name:"Japan Foundation Community Organisations Map",type:"地域検索 / Local directory",description:"Use the national map to find Melbourne-area Japanese clubs, schools and cultural organisations.",href:"https://sydney.jpf.go.jp/japan-related-community-organisations-in-australia/"}
     ],
     focus: ["Melbourne jobs","Housing","Japanese hair & beauty","Japanese restaurants","Events & culture","Melbourne consular services"]
   },
@@ -83,6 +106,11 @@ export const regions: Region[] = [
       {name:"Genki Mart",type:"Grocery / 日本食材",place:"Brisbane, QLD",href:"https://genkimart.com.au/"},
       {name:"Sono Japanese Restaurant",type:"Restaurant / 日本食",place:"Hamilton, QLD",href:"https://sonorestaurant.com.au/"}
     ],
+    communityResources: [
+      {name:"Australia-Japan Society Queensland",type:"日豪交流 / Community",description:"Long-running non-profit with cultural, social, educational and Japan-related events in Queensland.",href:"https://austjpnsoc.asn.au/"},
+      {name:"AJS Queensland Events",type:"イベント / Events",description:"Current Brisbane and Queensland Japanese cultural events, language and community activities.",href:"https://austjpnsoc.asn.au/"},
+      {name:"Japan Foundation Community Organisations Map",type:"地域検索 / Local directory",description:"Find Brisbane-area Japanese clubs, language groups, schools and community organisations.",href:"https://sydney.jpf.go.jp/japan-related-community-organisations-in-australia/"}
+    ],
     focus: ["Brisbane jobs","Housing","Japanese groceries","Japanese restaurants","Community events","Brisbane consular services"]
   },
   {
@@ -99,6 +127,11 @@ export const regions: Region[] = [
     consularUrl: "https://www.brisbane.au.emb-japan.go.jp/",
     localBusinesses: [
       {name:"Itoshin",type:"Restaurant / 日本食",place:"Mermaid Beach, QLD",href:"https://www.itoshin.com.au/"}
+    ],
+    communityResources: [
+      {name:"Japanese Society of Gold Coast",type:"日本人会 / Community",description:"Japanese community organisation providing local support, community news, events and education on the Gold Coast.",href:"https://jsgc.org.au/"},
+      {name:"Japanese Supplementary School – Southern Cross",type:"教育 / Education",description:"Japanese supplementary education and school information published through the Japanese Society of Gold Coast.",href:"https://jsgc.org.au/"},
+      {name:"Japan Foundation Community Organisations Map",type:"地域検索 / Local directory",description:"Find more Japanese community, education and culture resources around the Gold Coast.",href:"https://sydney.jpf.go.jp/japan-related-community-organisations-in-australia/"}
     ],
     focus: ["Gold Coast jobs","Share housing","Japanese restaurants","Beauty & services","Local events","Queensland consular information"]
   },
@@ -117,6 +150,12 @@ export const regions: Region[] = [
     localBusinesses: [
       {name:"hair plus",type:"Hair / 美容",place:"Perth, WA",href:"https://www.hairplus-perth.com/"}
     ],
+    communityResources: [
+      {name:"Japanese Association of Western Australia",type:"日本人会 / Community",description:"Japanese community organisation supporting networking, culture, education and Japanese families in WA.",href:"https://www.wanihonjinkai.com/english/"},
+      {name:"Australia-Japan Society of Western Australia",type:"日豪交流 / Australia–Japan",description:"Volunteer organisation promoting community and cultural links between Western Australia and Japan.",href:"https://www.ajswa.com.au/"},
+      {name:"Japanese School in Perth",type:"教育 / Education",description:"Japanese primary and junior-high education in Perth, with school visits and enrolment information.",href:"https://jsp.wa.edu.au/"},
+      {name:"Weekend Japanese School in Perth",type:"教育 / Weekend school",description:"Weekend Japanese-language classes with Saturday and Sunday programmes.",href:"https://wjsperth.org/"}
+    ],
     focus: ["Perth jobs","Housing","Japanese services","Food & groceries","WA community events","Perth consular services"]
   },
   {
@@ -132,6 +171,11 @@ export const regions: Region[] = [
     consularArea: "Victoria, Tasmania & South Australia",
     consularUrl: "https://www.melbourne.au.emb-japan.go.jp/",
     localBusinesses: [],
+    communityResources: [
+      {name:"Australia Japan Association of South Australia",type:"日豪交流 / Community",description:"Community association with Japanese-English conversation and social activities for people connected with Japan.",href:"https://ajaofsa.blogspot.com/"},
+      {name:"Japan Australia Friendship Association",type:"友好・文化 / Friendship & culture",description:"South Australian volunteer organisation focused on informal social and cultural friendship between Australians and Japanese.",href:"https://www.jafa.asn.au/"},
+      {name:"Japan Foundation Community Organisations Map",type:"地域検索 / Local directory",description:"Find Adelaide and South Australia Japanese language, cultural and community organisations.",href:"https://sydney.jpf.go.jp/japan-related-community-organisations-in-australia/"}
+    ],
     focus: ["Adelaide jobs","Housing","Japanese food","Community groups","Cultural events","Consular information"]
   },
   {
@@ -147,6 +191,11 @@ export const regions: Region[] = [
     consularArea: "Australian Capital Territory",
     consularUrl: "https://www.au.emb-japan.go.jp/",
     localBusinesses: [],
+    communityResources: [
+      {name:"Canberra Japan Club",type:"日本人会 / Community",description:"Community group supporting Japanese residents and families, Japanese-language activities, talks, clubs and cultural events.",href:"https://www.canberrajapanclub.org.au/en/about"},
+      {name:"Australia Japan Society – ACT",type:"日豪交流 / Australia–Japan",description:"ACT society connecting people with an interest in Australia–Japan relations, culture and community activities.",href:"https://ajsact.com.au/"},
+      {name:"Embassy of Japan – Canberra",type:"大使館 / Embassy",description:"Official Embassy information, cultural programmes and consular guidance for ACT residents.",href:"https://www.au.emb-japan.go.jp/"}
+    ],
     focus: ["Canberra jobs","Housing","Japanese community","Culture & events","Embassy information","Study & exchange"]
   },
   {
@@ -162,6 +211,11 @@ export const regions: Region[] = [
     consularArea: "Victoria, Tasmania & South Australia",
     consularUrl: "https://www.melbourne.au.emb-japan.go.jp/",
     localBusinesses: [],
+    communityResources: [
+      {name:"Australia-Japan Society of Tasmania",type:"日豪交流 / Community",description:"Non-political, non-profit society organising educational, cultural, social and community activities in Tasmania.",href:"https://www.ajstas.org.au/"},
+      {name:"Japan Club Tasmania",type:"日本人会 / Community",description:"Local club for Japanese nationals living in Tasmania, listed through the Australia-Japan Society of Tasmania.",href:"https://www.ajstas.org.au/links"},
+      {name:"Japan Foundation Community Organisations Map",type:"地域検索 / Local directory",description:"Search for Japanese community, education and cultural organisations in Tasmania.",href:"https://sydney.jpf.go.jp/japan-related-community-organisations-in-australia/"}
+    ],
     focus: ["Tasmania jobs","Housing","Japanese services","Local community","Events","Consular guidance"]
   },
   {
@@ -177,6 +231,11 @@ export const regions: Region[] = [
     consularArea: "NSW & Northern Territory",
     consularUrl: "https://www.sydney.au.emb-japan.go.jp/",
     localBusinesses: [],
+    communityResources: [
+      {name:"Australian Japanese Association of the Northern Territory (AJANT)",type:"日本人会・日豪交流 / Community",description:"Darwin-based non-profit supporting friendship, new arrivals, Japanese culture, language and community connections in the NT.",href:"https://austjapanfed.org.au/australian-japanese-association-of-the-northern-territory/"},
+      {name:"Sydney Consulate-General – NT information",type:"領事 / Consular",description:"The Sydney Consulate-General is responsible for the Northern Territory and publishes consular outreach and service information.",href:"https://www.sydney.au.emb-japan.go.jp/"},
+      {name:"Japan Foundation Community Organisations Map",type:"地域検索 / Local directory",description:"National map for finding Japanese-related organisations and services relevant to Northern Territory residents.",href:"https://sydney.jpf.go.jp/japan-related-community-organisations-in-australia/"}
+    ],
     focus: ["Darwin jobs","Housing","Japanese services","Community notices","Consular outreach","NT events"]
   }
 ];
