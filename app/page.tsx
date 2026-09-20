@@ -201,7 +201,7 @@ export default function Home() {
       <header id="top">
         <div className="utility">
           <span>🇯🇵 Japan × Australia 🇦🇺</span>
-          <span className="utilityRight">日本語 / English　｜　ログイン / Login</span>
+          <span className="utilityRight"><span className="languageLabel">日本語 + English</span><span className="utilitySep">｜</span><a className="loginLink" href="/login">ログイン / Login</a></span>
         </div>
 
         <div className="brandRow">
