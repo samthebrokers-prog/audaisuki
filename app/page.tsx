@@ -7,7 +7,7 @@ const navItems = [
   { ja: "グルメ", en: "Food", href: "#businesses" },
   { ja: "日系ビジネス", en: "Japanese Business", href: "#companies" },
   { ja: "大使館・領事館", en: "Embassy & Consulates", href: "#embassy" },
-  { ja: "ニュース", en: "News", href: "#official-news" },
+  { ja: "ニュース", en: "News", href: "/official-news" },
   { ja: "イベント", en: "Events", href: "#official-news" },
 ];
 
@@ -152,31 +152,87 @@ const missions = [
 const officialNews = [
   {
     date: "2026.09.18",
-    titleJa: "2027年JETプログラム応募受付",
+    region: "Australia",
+    kind: "募集 / Opportunity",
+    titleJa: "2027年JETプログラム応募受付開始",
     titleEn: "Applications open for the 2027 JET Programme",
-    source: "在オーストラリア日本国大使館",
-    href: "https://www.au.emb-japan.go.jp/",
+    source: "在オーストラリア日本国大使館 / Embassy of Japan",
+    href: "https://www.au.emb-japan.go.jp/itpr_en/education_jet_en.html",
+  },
+  {
+    date: "2026.09.11",
+    region: "Australia",
+    kind: "イベント / Events",
+    titleJa: "日豪友好協力基本条約署名50周年イベントカレンダー",
+    titleEn: "50th Anniversary Japan–Australia events calendar",
+    source: "在オーストラリア日本国大使館 / Embassy of Japan",
+    href: "https://www.au.emb-japan.go.jp/itprtop_en/11_000001_02160.html",
+  },
+  {
+    date: "2026.09.01",
+    region: "NT / Darwin",
+    kind: "領事 / Consular",
+    titleJa: "ダーウィン領事出張サービスのお知らせ",
+    titleEn: "Darwin consular outreach service notice",
+    source: "在シドニー日本国総領事館 / Sydney Consulate-General",
+    href: "https://www.sydney.au.emb-japan.go.jp/index_j.htm",
+  },
+  {
+    date: "2026.08.25",
+    region: "NSW / NT",
+    kind: "旅券 / Passport",
+    titleJa: "マイナポータルからのパスポートオンライン申請開始",
+    titleEn: "Online passport applications via Mynaportal",
+    source: "在シドニー日本国総領事館 / Sydney Consulate-General",
+    href: "https://www.sydney.au.emb-japan.go.jp/itpr_ja/my_number_passport.html",
   },
   {
     date: "2026.09.14",
-    titleJa: "日豪友好協力基本条約署名50周年イベントカレンダー",
-    titleEn: "50th Anniversary Japan–Australia events calendar",
-    source: "在オーストラリア日本国大使館",
-    href: "https://www.au.emb-japan.go.jp/",
+    region: "VIC / TAS / SA",
+    kind: "ビザ / Visa",
+    titleJa: "ビザ・渡航情報を更新",
+    titleEn: "Visa & Travel information updated",
+    source: "在メルボルン日本国総領事館 / Melbourne Consulate-General",
+    href: "https://www.melbourne.au.emb-japan.go.jp/itpr_en/consular.html",
+  },
+  {
+    date: "2026.09",
+    region: "QLD",
+    kind: "地域情報 / Community",
+    titleJa: "ブリスベン総領事館「Consulate Updates」9月号",
+    titleEn: "Brisbane Consulate Updates — September issue",
+    source: "在ブリスベン日本国総領事館 / Brisbane Consulate-General",
+    href: "https://www.brisbane.au.emb-japan.go.jp/itpr_en/jicc_newsletters.html",
   },
   {
     date: "2026.09.18",
+    region: "WA / Perth",
+    kind: "日豪交流 / Community",
     titleJa: "兵庫県・西オーストラリア州 姉妹提携45周年関連訪問",
     titleEn: "Hyogo–Western Australia sister-state 45th anniversary visit",
-    source: "在パース日本国総領事館",
-    href: "https://www.perth.au.emb-japan.go.jp/",
+    source: "在パース日本国総領事館 / Perth Consulate-General",
+    href: "https://www.perth.au.emb-japan.go.jp/itpr_en/11_000001_00878.html",
+  },
+];
+
+const upcomingJapanEvents = [
+  {
+    date: "23–30 Sep",
+    place: "Perth, WA",
+    titleJa: "UWA柔道クラブ 日豪柔道交流",
+    titleEn: "UWA Judo Club Legacy Japan–Australia Judo Exchange",
   },
   {
-    date: "2026.08.26",
-    titleJa: "在留状況確認メールの配信について",
-    titleEn: "Notice regarding residence-status confirmation emails",
-    source: "在パース日本国総領事館",
-    href: "https://www.perth.au.emb-japan.go.jp/",
+    date: "24 Sep",
+    place: "Adelaide, SA",
+    titleJa: "日本映画上映「The Making of a Japanese」",
+    titleEn: "Japanese Film Screening: The Making of a Japanese",
+  },
+  {
+    date: "26 Sep–20 Dec",
+    place: "Australia",
+    titleJa: "日本映画祭オーストラリア 2026",
+    titleEn: "Japanese Film Festival Australia 2026",
   },
 ];
 
@@ -253,7 +309,7 @@ export default function Home() {
             <a href="#classifieds">🏠 住まいを探す <span>Housing</span></a>
             <a href="#businesses">✂️ 日本語対応サービス <span>Japanese-speaking</span></a>
             <a href="#embassy">🇯🇵 大使館・領事館 <span>Consular help</span></a>
-            <a href="#official-news">📣 公式お知らせ <span>Official notices</span></a>
+            <a href="/official-news">📣 公式お知らせ <span>Official notices</span></a>
           </aside>
         </section>
 
@@ -383,19 +439,44 @@ export default function Home() {
         <section id="official-news" className="section newsSection">
           <div className="sectionHead">
             <div>
-              <span className="kicker">OFFICIAL UPDATES</span>
-              <h2>大使館・領事館ニュース <small>Embassy & Consulate News</small></h2>
-              <p>公式公館が公開している重要なお知らせへの入口です。全文は公式サイトで確認できます。</p>
+              <span className="kicker">OFFICIAL JAPAN × COMMUNITY</span>
+              <h2>大使館・領事館ニュース <small>Embassy, Consulate & Community Updates</small></h2>
+              <p>生活に役立つ領事情報、旅券・ビザ、募集、地域イベントを公式ソースからまとめています。</p>
+              <p className="officialEnglish">Practical official information for Japanese residents and the wider Japan–Australia community.</p>
             </div>
+            <a className="officialMore" href="/official-news">すべて見る / View official hub →</a>
           </div>
+
+          <div className="eventStrip">
+            <div className="eventStripTitle"><b>今週から / Coming up</b><span>Official Japan–Australia event calendar</span></div>
+            {upcomingJapanEvents.map((event) => (
+              <article key={event.date + event.titleJa}>
+                <time>{event.date}</time>
+                <b>{event.titleJa}</b>
+                <span>{event.titleEn}</span>
+                <small>📍 {event.place}</small>
+              </article>
+            ))}
+          </div>
+
           <div className="newsList">
             {officialNews.map((news) => (
               <a href={news.href} target="_blank" rel="noreferrer" key={news.date + news.titleJa}>
                 <time>{news.date}</time>
-                <div><b>{news.titleJa}</b><span>{news.titleEn}</span><small>公式情報 / Official source: {news.source}</small></div>
+                <div>
+                  <div className="newsMeta"><span>{news.region}</span><span>{news.kind}</span></div>
+                  <b>{news.titleJa}</b>
+                  <span>{news.titleEn}</span>
+                  <small>公式情報 / Official source: {news.source}</small>
+                </div>
                 <strong>↗</strong>
               </a>
             ))}
+          </div>
+
+          <div className="officialSourceLine">
+            <span>最終確認 / Last reviewed: 21 Sep 2026</span>
+            <a href="/official-news">地域別の領事館・重要手続を見る / Find your consulate & essential services →</a>
           </div>
         </section>
 
