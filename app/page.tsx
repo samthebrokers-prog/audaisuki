@@ -200,7 +200,7 @@ export default function Home() {
     <>
       <header id="top">
         <div className="utility">
-          <span>🇦🇺 Australia × Japan</span>
+          <span>🇯🇵 Japan × Australia 🇦🇺</span>
           <span className="utilityRight">日本語 / English　｜　ログイン / Login</span>
         </div>
 
@@ -374,16 +374,19 @@ export default function Home() {
       </main>
 
       <footer>
-        <div>
-          <b>AU<span>大好き</span></b>
+        <div className="footerBrand">
+          <b>AuDaisuki <span>オーストラリア大好き</span> <em>🇯🇵 🇦🇺</em></b>
           <p>オーストラリアで暮らす日本人と、日本に興味のあるオーストラリアのためのコミュニティポータル。<br/><span>Japanese community & information portal for Australia.</span></p>
         </div>
         <div className="footerLinks">
-          <a href="#businesses">ビジネス / Business</a>
+          <a href="/about">このサイトについて / About</a>
+          <a href="/privacy">プライバシー / Privacy</a>
+          <a href="/terms">利用規約 / Terms</a>
+          <a href="/contact">お問い合わせ / Contact</a>
+          <a href="/accessibility">アクセシビリティ / Accessibility</a>
           <a href="#embassy">大使館・領事館 / Embassy</a>
-          <a href="#official-news">公式ニュース / Official News</a>
-          <a href="#classifieds">掲示板 / Classifieds</a>
         </div>
+        <p className="independenceNote">Independent Japanese–Australian community website. Not affiliated with the Government of Japan, the Embassy of Japan, or any Australian government authority.</p>
         <small>© 2026 Audaisuki. Independent community portal. Business and official information last reviewed September 2026.</small>
       </footer>
     </>
