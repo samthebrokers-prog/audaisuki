@@ -33,3 +33,10 @@
 .visualStory a{display:inline-block;margin-top:7px;font-size:9px;color:#c7d8e6;text-decoration:underline;text-underline-offset:2px}
 @media(max-width:900px){.visualStory{grid-template-columns:1fr 1fr}.visualStory article:first-child{grid-column:1/-1;min-height:320px}}
 @media(max-width:760px){.quickPhoto{margin:-22px -22px 18px}.quickPhoto img{height:170px}.visualStory{grid-template-columns:1fr;padding:0 10px}.visualStory article,.visualStory article:first-child{grid-column:auto;min-height:250px}}
+
+.utilityRight{display:flex;align-items:center;gap:8px}
+.languageLabel{color:#dbe8f5;cursor:default}
+.utilitySep{color:#7690a7}
+.loginLink{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.loginLink:hover{color:#ffd9db}
+@media(max-width:760px){.utilityRight{display:none}}
