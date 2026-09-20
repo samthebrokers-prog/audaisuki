@@ -12,16 +12,16 @@ import LanguageSwitcher from "./LanguageSwitcher";\n\nconst navItems = [
 ];
 
 const areas = [
-  "全国 / Australia",
-  "NSW / Sydney",
-  "VIC / Melbourne",
-  "QLD / Brisbane",
-  "Gold Coast",
-  "WA / Perth",
-  "SA / Adelaide",
-  "ACT / Canberra",
-  "TAS / Tasmania",
-  "NT / Darwin",
+  { label: "全国 / Australia", href: "/locations/australia" },
+  { label: "NSW / Sydney", href: "/locations/nsw-sydney" },
+  { label: "VIC / Melbourne", href: "/locations/vic-melbourne" },
+  { label: "QLD / Brisbane", href: "/locations/qld-brisbane" },
+  { label: "QLD / Gold Coast", href: "/locations/qld-gold-coast" },
+  { label: "WA / Perth", href: "/locations/wa-perth" },
+  { label: "SA / Adelaide", href: "/locations/sa-adelaide" },
+  { label: "ACT / Canberra", href: "/locations/act-canberra" },
+  { label: "TAS / Tasmania", href: "/locations/tas-tasmania" },
+  { label: "NT / Darwin", href: "/locations/nt-darwin" },
 ];
 
 const directory = [
@@ -279,7 +279,7 @@ export default function Home() {
 
         <div className="locations" aria-label="Location filter">
           <b>📍 地域 / Location</b>
-          {areas.map((area) => <button key={area}>{area}</button>)}
+          {areas.map((area) => <a className="locationChip" key={area.href} href={area.href}>{area.label}</a>)}
         </div>
       </header>
 
