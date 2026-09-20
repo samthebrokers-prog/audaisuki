@@ -69,6 +69,27 @@ export default async function RegionPage({ params }: { params: Promise<{slug:str
           </div>
         </section>
 
+        <section className="regionResources">
+          <div className="regionHeading">
+            <span className="kicker">COMMUNITY & EDUCATION</span>
+            <h2>地域の日本人コミュニティ <small>Community, schools & useful organisations</small></h2>
+          </div>
+          <div className="regionResourceGrid">
+            {region.communityResources.map(resource => (
+              <a key={resource.name} href={resource.href} target="_blank" rel="noreferrer">
+                <span>{resource.type}</span>
+                <h3>{resource.name}</h3>
+                <p>{resource.description}</p>
+                <b>公式・団体サイト / Visit resource ↗</b>
+              </a>
+            ))}
+          </div>
+          <div className="regionReviewed">
+            <span>公開情報を確認 / Public information reviewed: 21 Sep 2026</span>
+            <a href="https://sydney.jpf.go.jp/japan-related-community-organisations-in-australia/" target="_blank" rel="noreferrer">全国の日本関連団体を探す / National community map ↗</a>
+          </div>
+        </section>
+
         <section className="regionLocal">
           <div className="regionHeading">
             <span className="kicker">LOCAL DIRECTORY</span>
