@@ -40,3 +40,43 @@
 .loginLink{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .loginLink:hover{color:#ffd9db}
 @media(max-width:760px){.utilityRight{display:none}}
+
+.officialEnglish{font-size:12px!important;color:#aebfd0!important;margin-top:4px!important}
+.officialMore{color:#fff;border:1px solid #ffffff35;border-radius:999px;padding:9px 13px;font-size:11px;font-weight:800;white-space:nowrap}
+.eventStrip{max-width:1216px;margin:0 auto 15px;display:grid;grid-template-columns:180px repeat(3,1fr);gap:8px}
+.eventStripTitle{background:#0c2f50;border:1px solid #ffffff22;border-radius:10px;padding:14px;display:flex;flex-direction:column;justify-content:center}
+.eventStripTitle b{font-size:12px}.eventStripTitle span{font-size:9px;color:#a9bdd0;margin-top:4px}
+.eventStrip article{background:#1d4b74;border:1px solid #ffffff18;border-radius:10px;padding:13px}
+.eventStrip time{display:block;color:#ffb8bc;font-size:10px;font-weight:800;margin-bottom:6px}
+.eventStrip article b{display:block;font-size:11px;line-height:1.45}
+.eventStrip article span{display:block;font-size:9px;line-height:1.45;color:#c8d8e5;margin-top:3px}
+.eventStrip article small{display:block;font-size:9px;color:#9eb6ca;margin-top:7px}
+.newsMeta{display:flex!important;gap:5px!important;flex-wrap:wrap;margin-bottom:6px}
+.newsMeta span{display:inline-block!important;background:#eef3f7;color:#405a70!important;border-radius:999px;padding:3px 6px;margin:0!important;font-size:8px!important;font-weight:700}
+.officialSourceLine{max-width:1216px;margin:12px auto 0;display:flex;justify-content:space-between;gap:15px;align-items:center;font-size:9px;color:#aebfd0}
+.officialSourceLine a{color:#fff;font-weight:800}
+.officialHub{min-height:100vh;background:#f5f7f9;color:#172033}
+.officialHubHeader{background:#0d2945;color:#fff;padding:18px max(18px,calc((100% - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px}
+.officialHubBrand{font-size:23px;font-weight:900}.officialHubBrand span{color:#ff6b72}
+.officialHubHeader>div{font-size:12px;color:#c6d5e2}.officialHubHeader>div span{margin:0 7px}
+.officialHubMain{max-width:1120px;margin:0 auto;padding:42px 18px 70px}
+.officialHubIntro{background:linear-gradient(115deg,#eaf4fd,#fff 58%,#fff0f0);border:1px solid #dfe7ee;border-radius:20px;padding:38px;margin-bottom:28px}
+.officialHubIntro h1{font-size:39px;line-height:1.15;color:#143c68;margin:8px 0 16px}.officialHubIntro h1 small{display:block;font-size:15px;color:#657688;margin-top:8px;font-weight:600}
+.officialHubIntro p{font-size:14px;line-height:1.7;color:#465a6d;max-width:820px}.officialHubIntro .en{font-size:12px}
+.hubReview{display:inline-block;margin-top:12px;background:#fff;border:1px solid #dce4ea;border-radius:999px;padding:7px 11px;font-size:10px;color:#5c6e7d}
+.officialHubMain section{margin-top:36px}.officialHubMain section>h2,.hubSectionHead h2{color:#143c68;font-size:25px;margin:5px 0 15px}
+.hubServiceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.hubServiceGrid article{background:#fff;border:1px solid #dfe5ea;border-radius:12px;padding:18px}
+.hubServiceGrid article>span{font-size:25px}.hubServiceGrid h3{font-size:13px;color:#143c68;margin:10px 0 6px}.hubServiceGrid p{font-size:11px;line-height:1.55;color:#667685;margin:0}
+.hubSectionHead{display:flex;justify-content:space-between;align-items:end;gap:18px}.hubSectionHead small{font-size:9px;color:#7e8c99;margin-bottom:17px}
+.hubUpdateList{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hubUpdateList>a{background:#fff;border:1px solid #dfe5ea;border-radius:12px;padding:18px;box-shadow:0 3px 12px #102f4a09}
+.hubUpdateMeta{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.hubUpdateMeta time{font-size:9px;color:#e23b43;font-weight:800}.hubUpdateMeta span{background:#eef3f7;color:#4b6376;border-radius:999px;padding:4px 7px;font-size:8px;font-weight:700}
+.hubUpdateList h3{font-size:14px;color:#143c68;margin:11px 0 4px}.hubUpdateList>a>b{font-size:11px;color:#3d4f60}.hubUpdateList p{font-size:10px;color:#687789;line-height:1.55}.hubUpdateList small{font-size:8px;color:#e23b43;font-weight:700}
+.hubEvents{background:#143c68;color:#fff;border-radius:18px;padding:25px}.hubEvents .hubSectionHead h2{color:#fff}.hubEvents .kicker{color:#ff8f95}
+.hubEventGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.hubEventGrid article{background:#fff;color:#172033;border-radius:10px;padding:16px}.hubEventGrid time{color:#e23b43;font-size:10px;font-weight:800}.hubEventGrid h3{font-size:13px;color:#143c68;margin:8px 0 5px}.hubEventGrid p{font-size:10px;line-height:1.5;color:#5f6f7e}.hubEventGrid small{font-size:9px;color:#7b8995}
+.hubCalendarLink{display:inline-block;margin-top:14px;font-size:10px;font-weight:800;color:#fff;text-decoration:underline;text-underline-offset:3px}
+.hubMissionGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.hubMissionGrid>a{background:#fff;border:1px solid #dfe5ea;border-top:4px solid #e23b43;border-radius:10px;padding:16px}.hubMissionGrid>a>b{font-size:10px;color:#e23b43}.hubMissionGrid h3{font-size:13px;color:#143c68;margin:8px 0}.hubMissionGrid p{font-size:10px;color:#687789}.hubMissionGrid span{font-size:9px;color:#e23b43;font-weight:800}
+.hubDisclaimer{background:#fff8ed;border:1px solid #f0dfc3;border-radius:12px;padding:18px}.hubDisclaimer b{font-size:12px;color:#8a5a16}.hubDisclaimer p{font-size:10px;line-height:1.6;color:#6d5d45;margin:7px 0 0}
+@media(max-width:900px){.eventStrip{grid-template-columns:1fr 1fr}.eventStripTitle{grid-column:1/-1}.hubServiceGrid,.hubMissionGrid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.newsSection .sectionHead{display:block}.officialMore{display:inline-block;margin-top:12px}.eventStrip{grid-template-columns:1fr}.eventStripTitle{grid-column:auto}.officialSourceLine{align-items:flex-start;flex-direction:column}.officialHubHeader{padding:15px 12px}.officialHubHeader>div span{display:none}.officialHubBrand{font-size:18px}.officialHubMain{padding:28px 10px 50px}.officialHubIntro{padding:25px 20px}.officialHubIntro h1{font-size:30px}.hubServiceGrid,.hubUpdateList,.hubEventGrid,.hubMissionGrid{grid-template-columns:1fr}.hubEvents{padding:20px 14px}.hubSectionHead{display:block}.hubSectionHead small{display:block;margin:0 0 12px}}
