@@ -240,6 +240,14 @@ export default function Home() {
             </div>
           </div>
           <aside className="quick">
+            <figure className="quickPhoto">
+              <img
+                src="https://images.unsplash.com/photo-1766323108378-8d101fa9f9ee?auto=format&fit=crop&q=78&w=1200"
+                alt="People dining near the Sydney Opera House in Australia"
+                loading="eager"
+              />
+              <figcaption>🇯🇵 日本とオーストラリアを、もっと近くに。 <span>Japan × Australia</span></figcaption>
+            </figure>
             <h2>よく使う情報 <small>Quick access</small></h2>
             <a href="#classifieds">💼 仕事を探す <span>Jobs</span></a>
             <a href="#classifieds">🏠 住まいを探す <span>Housing</span></a>
@@ -247,6 +255,45 @@ export default function Home() {
             <a href="#embassy">🇯🇵 大使館・領事館 <span>Consular help</span></a>
             <a href="#official-news">📣 公式お知らせ <span>Official notices</span></a>
           </aside>
+        </section>
+
+        <section className="visualStory" aria-label="Japan Australia community">
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1751337034616-576f197c0860?auto=format&fit=crop&q=76&w=1200"
+              alt="Japanese restaurant interior with chefs at work"
+              loading="lazy"
+            />
+            <div>
+              <b>食べる / Eat</b>
+              <span>日本の味をオーストラリアで<br/>Japanese food across Australia</span>
+              <a href="https://unsplash.com/photos/customers-watch-chefs-working-in-a-japanese-restaurant-YNtE2GvjbOA" target="_blank" rel="noreferrer">Photo: Unsplash ↗</a>
+            </div>
+          </article>
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1641352347307-4fd2c8af1702?auto=format&fit=crop&q=76&w=1200"
+              alt="Japanese sushi served at a restaurant in Brisbane"
+              loading="lazy"
+            />
+            <div>
+              <b>見つける / Discover</b>
+              <span>レストラン・ショップ・サービス<br/>Restaurants, shops & services</span>
+              <a href="https://unsplash.com/photos/a-plate-of-food-on-a-wooden-table-35lbh8uLAok" target="_blank" rel="noreferrer">Photo: Unsplash ↗</a>
+            </div>
+          </article>
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1766323108378-8d101fa9f9ee?auto=format&fit=crop&q=76&w=1200"
+              alt="Sydney Opera House and people enjoying the waterfront"
+              loading="lazy"
+            />
+            <div>
+              <b>つながる / Connect</b>
+              <span>仕事・暮らし・コミュニティ<br/>Work, life & community</span>
+              <a href="https://unsplash.com/photos/people-dining-with-sydney-opera-house-in-background-MIdqb8Sq9_o" target="_blank" rel="noreferrer">Photo: Unsplash ↗</a>
+            </div>
+          </article>
         </section>
 
         <section id="businesses" className="section">
