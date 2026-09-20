@@ -115,3 +115,15 @@ html[data-language="ja"] .businessCard .jp,html[data-language="en"] .businessCar
 .regionBuild{margin-top:18px;background:#fff8ed;border:1px solid #f0dfc3;border-radius:12px;padding:18px}.regionBuild b{font-size:12px;color:#7a5318}.regionBuild p{font-size:10px;color:#75664f}.regionBuild a{font-size:9px;color:#e23b43;font-weight:800}
 @media(max-width:850px){.regionHero,.regionOfficial{grid-template-columns:1fr}.regionCommunityGrid,.regionBusinessGrid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.regionIndex,.regionPage{padding:24px 10px 48px}.regionIndexIntro,.regionHero{padding:23px 18px}.regionIndexIntro h1,.regionHero h1{font-size:29px}.regionIndexGrid,.regionCommunityGrid,.regionBusinessGrid{grid-template-columns:1fr}.regionTop{padding:14px 10px}.regionBrand{font-size:17px}}
+
+.regionResources{margin-top:38px}
+.regionResourceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.regionResourceGrid>a{background:#fff;border:1px solid #dfe5ea;border-radius:12px;padding:18px;display:flex;flex-direction:column;min-height:190px;box-shadow:0 3px 12px #102f4a08}
+.regionResourceGrid>a>span{font-size:9px;color:#e23b43;font-weight:800}
+.regionResourceGrid h3{font-size:14px;color:#143c68;margin:9px 0 6px;line-height:1.35}
+.regionResourceGrid p{font-size:10px;color:#657583;line-height:1.55;margin:0 0 14px}
+.regionResourceGrid b{font-size:9px;color:#e23b43;margin-top:auto}
+.regionReviewed{margin-top:10px;background:#eef3f7;border-radius:9px;padding:10px 12px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.regionReviewed span{font-size:9px;color:#6a7884}.regionReviewed a{font-size:9px;color:#143c68;font-weight:800}
+@media(max-width:850px){.regionResourceGrid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.regionResourceGrid{grid-template-columns:1fr}.regionReviewed{align-items:flex-start;flex-direction:column}}
