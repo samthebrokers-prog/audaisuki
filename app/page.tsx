@@ -1,4 +1,6 @@
-import LanguageSwitcher from "./LanguageSwitcher";\n\nconst navItems = [
+import LanguageSwitcher from "./LanguageSwitcher";
+
+const navItems = [
   { ja: "ホーム", en: "Home", href: "#top" },
   { ja: "仕事", en: "Jobs", href: "#classifieds" },
   { ja: "住まい", en: "Housing", href: "#classifieds" },
