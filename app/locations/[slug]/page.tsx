@@ -108,9 +108,9 @@ export default async function RegionPage({ params }: { params: Promise<{slug:str
             </div>
           ) : (
             <div className="regionEmpty">
-              <b>この地域のディレクトリを拡大中です。 / We are expanding this local directory.</b>
-              <p>日本語対応の店舗、レストラン、専門サービス、コミュニティ団体を順次追加します。</p>
-              <a href="/contact">掲載情報を送る / Suggest a local listing →</a>
+              <b>地域の日本語情報 / Local Japanese community directory</b>
+              <p>地域のコミュニティ・学校・領事情報は上の確認済みリンクからご利用いただけます。店舗やサービスの推薦も歓迎します。</p>
+              <a href="/contact">地域情報を推薦する / Suggest a local listing →</a>
             </div>
           )}
         </section>
