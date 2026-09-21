@@ -16,12 +16,12 @@ export async function generateMetadata({ params }: { params: Promise<{slug:strin
 }
 
 const communityCards = [
-  ["💼","仕事 / Jobs","Local jobs and Japanese-speaking opportunities"],
-  ["🏠","住まい / Housing","Share houses, rentals and local living"],
-  ["🍜","食べる / Food","Japanese restaurants, groceries and cafés"],
-  ["✂️","生活サービス / Services","Beauty, health and professional services"],
-  ["🤝","仲間 / Community","Friends, clubs, language exchange and groups"],
-  ["🎌","イベント / Events","Japanese and Japan–Australia local events"]
+  ["💼","仕事 / Jobs","Local jobs and Japanese-speaking opportunities","求人・仕事情報を探す / Explore jobs"],
+  ["🏠","住まい / Housing","Share houses, rentals and local living","住まい情報を探す / Explore housing"],
+  ["🍜","食べる / Food","Japanese restaurants, groceries and cafés","地域のお店を見る / Explore local food"],
+  ["✂️","生活サービス / Services","Beauty, health and professional services","地域サービスを見る / Explore services"],
+  ["🤝","仲間 / Community","Friends, clubs, language exchange and groups","地域団体を見る / Explore community"],
+  ["🎌","イベント / Events","Japanese and Japan–Australia local events","イベント情報を見る / Explore events"]
 ];
 
 export default async function RegionPage({ params }: { params: Promise<{slug:string}> }) {
@@ -58,18 +58,18 @@ export default async function RegionPage({ params }: { params: Promise<{slug:str
             <h2>{region.city} で暮らす <small>Life in {region.city}</small></h2>
           </div>
           <div className="regionCommunityGrid">
-            {communityCards.map(([icon,title,text]) => (
+            {communityCards.map(([icon,title,text,linkText], index) => (
               <article key={title}>
                 <span>{icon}</span>
                 <h3>{title}</h3>
                 <p>{text}</p>
-                <a href="/#classifieds">掲載準備中 / Building this section →</a>
+                <a href={index < 2 ? "/#classifieds" : index < 4 ? "#local-directory" : "#community-resources"}>{linkText} →</a>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="regionResources">
+        <section className="regionResources" id="community-resources">
           <div className="regionHeading">
             <span className="kicker">COMMUNITY & EDUCATION</span>
             <h2>地域の日本人コミュニティ <small>Community, schools & useful organisations</small></h2>
@@ -90,7 +90,7 @@ export default async function RegionPage({ params }: { params: Promise<{slug:str
           </div>
         </section>
 
-        <section className="regionLocal">
+        <section className="regionLocal" id="local-directory">
           <div className="regionHeading">
             <span className="kicker">LOCAL DIRECTORY</span>
             <h2>日本語サービス・お店 <small>Japanese services & businesses</small></h2>
