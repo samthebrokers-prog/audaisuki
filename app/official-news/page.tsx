@@ -6,6 +6,26 @@ export const metadata = {
 const updates = [
   {
     date: "18 Sep 2026",
+    region: "NSW / NT",
+    category: "Police Certificate",
+    ja: "警察証明の受取状況を更新",
+    en: "Sydney police certificate collection status updated",
+    note: "The Sydney Consulate-General says certificates applied for by 30 July 2026 have arrived. Collection does not require an online appointment; eligible distant NSW and NT residents may use the postal collection option described by the Consulate.",
+    href: "https://www.sydney.au.emb-japan.go.jp/itpr_en/police_certificate.html",
+    source: "Consulate-General of Japan in Sydney"
+  },
+  {
+    date: "15 Sep 2026",
+    region: "QLD",
+    category: "Working Holiday Visa",
+    ja: "ワーキングホリデービザ予約困難時の案内",
+    en: "Working Holiday visa appointment guidance",
+    note: "Brisbane advises applicants intending to depart Australia by 25 November 2026 who cannot obtain an appointment to email the Visa Section with the requested details. Later departures should continue checking the online booking system.",
+    href: "https://www.brisbane.au.emb-japan.go.jp/itpr_en/visa_visa_wh.html",
+    source: "Consulate-General of Japan in Brisbane"
+  },
+  {
+    date: "18 Sep 2026",
     region: "Australia",
     category: "Opportunity",
     ja: "2027年JETプログラム応募受付開始",
@@ -108,7 +128,7 @@ export default function OfficialNewsPage() {
           <h1>大使館・領事館・生活情報<br/><small>Embassy, Consulate & Community Updates</small></h1>
           <p>オーストラリアで暮らす日本人や日豪コミュニティが必要とする情報を、公式公館へのリンクとともに整理しています。</p>
           <p className="en">A practical gateway to official consular notices, passports, visas, safety information, opportunities and community events.</p>
-          <div className="hubReview">最終確認 / Last reviewed: <b>21 September 2026</b></div>
+          <div className="hubReview">最終確認 / Last reviewed: <b>23 September 2026</b></div>
         </div>
 
         <section className="hubImportant">
