@@ -315,6 +315,24 @@ export default function Home() {
           </aside>
         </section>
 
+        <section className="dailyNeeds" aria-label="Australia life essentials">
+          <div className="dailyNeedsHead">
+            <span className="kicker">AUSTRALIA LIFE / 毎日使う情報</span>
+            <h2>オーストラリア生活で、今知りたいこと。</h2>
+            <p>ビザ、仕事、住まい、友達、英語、食べる。日本人の「今日必要」にすぐ届く入口です。</p>
+          </div>
+          <div className="dailyNeedsGrid">
+            <a href="/official-news"><span>🛂</span><b>ビザ・ワーホリ</b><small>Visa & Working Holiday</small><em>417・更新情報</em></a>
+            <a href="#classifieds"><span>💼</span><b>仕事を探す</b><small>Jobs</small><em>日本語・ローカル求人</em></a>
+            <a href="#classifieds"><span>🏠</span><b>住まいを探す</b><small>Housing</small><em>シェア・部屋・生活</em></a>
+            <a href="#classifieds"><span>🤝</span><b>友達・仲間募集</b><small>Friends & Community</small><em>地域・趣味・交流</em></a>
+            <a href="#classifieds"><span>🗣️</span><b>英語・語学交換</b><small>English & Language Exchange</small><em>暮らしで使う英語</em></a>
+            <a href="#directory"><span>🍜</span><b>日本食・買い物</b><small>Food & Shopping</small><em>レストラン・食材店</em></a>
+            <a href="#official"><span>📣</span><b>大使館・領事館</b><small>Embassy & Consulates</small><em>公式のお知らせ</em></a>
+            <a href="#locations"><span>📍</span><b>都市から探す</b><small>Sydney・Melbourne・Brisbane・Perth</small><em>地域情報</em></a>
+          </div>
+        </section>
+
         <section className="homeNews" aria-label="Latest news">
           <div className="homeNewsHead">
             <div><span className="kicker">LATEST / NEW</span><h2>最新ニュース <small>Australia × Japan News</small></h2></div>
