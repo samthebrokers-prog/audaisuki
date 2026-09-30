@@ -315,6 +315,32 @@ export default function Home() {
           </aside>
         </section>
 
+        <section className="homeNews" aria-label="Latest news">
+          <div className="homeNewsHead">
+            <div><span className="kicker">LATEST / NEW</span><h2>最新ニュース <small>Australia × Japan News</small></h2></div>
+            <a href="/official-news">ニュース一覧 / All news →</a>
+          </div>
+          <div className="homeNewsGrid">
+            <a className="homeNewsLead" href={officialNews[0].href} target="_blank" rel="noreferrer">
+              <span className="newFlag">NEW</span>
+              <time>{officialNews[0].date}</time>
+              <strong>{officialNews[0].titleJa}</strong>
+              <b>{officialNews[0].titleEn}</b>
+              <small>{officialNews[0].source}</small>
+            </a>
+            <div className="homeNewsList">
+              {officialNews.slice(1,5).map((news) => (
+                <a href={news.href} target="_blank" rel="noreferrer" key={"home-" + news.date + news.titleJa}>
+                  <div><span>{news.region}</span><time>{news.date}</time></div>
+                  <strong>{news.titleJa}</strong>
+                  <b>{news.titleEn}</b>
+                  <em>NEW</em>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="visualStory" aria-label="Japan Australia community">
           <article>
             <img
