@@ -140,3 +140,29 @@ html[data-language="ja"] .businessCard .jp,html[data-language="en"] .businessCar
 .homeNewsList>a{position:relative;border:1px solid #dfe5ea;border-radius:10px;padding:15px 40px 14px 15px;background:#fff;box-shadow:0 3px 12px #102f4a08}
 .homeNewsList>a>div{display:flex;gap:8px;align-items:center;margin-bottom:7px}.homeNewsList span{font-size:9px;color:#143c68;background:#eef3f7;border-radius:999px;padding:3px 6px}.homeNewsList time{font-size:9px;color:#7d8b97}.homeNewsList strong{display:block;font-size:13px;color:#143c68;line-height:1.45}.homeNewsList b{display:block;font-size:10px;color:#71808d;line-height:1.45;margin-top:4px}.homeNewsList em{position:absolute;right:9px;top:9px;background:#e23b43;color:#fff;font-style:normal;font-size:8px;font-weight:900;border-radius:3px;padding:3px 5px}
 @media(max-width:760px){.homeNewsGrid{grid-template-columns:1fr}.homeNewsList{grid-template-columns:1fr}.homeNewsLead{min-height:220px;padding:24px}.homeNewsLead strong{font-size:20px}.homeNewsHead h2{font-size:23px}.homeNewsHead h2 small{display:block;margin:3px 0 0}.homeNewsHead>a{white-space:nowrap}}
+
+/* AUDaisuki warm community identity — inspired by classic Japanese community portals */
+:root{--au-gold:#f5c400;--au-ink:#17150f;--au-charcoal:#242119;--au-warm:#fffaf0}
+.utility{background:var(--au-ink)}
+header{background:var(--au-gold)}
+.brandRow{background:var(--au-gold)}
+.brand strong{color:#17150f}.brand strong span{color:#17150f}.brand small,.brand small i{color:#3f3824}
+.postButton{background:#17150f;color:#fff}
+nav{background:linear-gradient(#302d25,#17150f);border-block:0;position:sticky}
+nav a{border-right:1px solid #ffffff18;color:#fff}
+nav a:first-child{border-left:1px solid #ffffff18}
+nav b{color:#fff}nav small{color:#ddd5bd}
+.locations{background:#f8d94d;border-bottom:1px solid #d9ae00}
+.locations b{color:#17150f}.locationChip{background:#fff9df;border-color:#d4ac10;color:#332d1b}
+.locationChip:hover{border-color:#17150f;color:#17150f;background:#fff}
+.heroCopy{background:linear-gradient(120deg,#fff8d8 0%,#fff 62%,#fffaf0 100%);border-color:#eadba1}
+.eyebrow,.kicker,.textLink,.links a,.classifiedGrid a{color:#9a6900}
+.hero h1,.sectionHead h2,.businessCard h3,.classifiedGrid h3{color:#292313}
+.primary{background:#17150f}.secondary{color:#292313;border-color:#d7c77f}
+.quick{background:#242119}.quickPhoto{background:#17150f}.quickPhoto figcaption{background:linear-gradient(transparent,#17150fe8)}
+.homeNewsHead{border-bottom-color:#17150f}.homeNewsHead h2{color:#292313}.homeNewsHead>a{color:#8c6100}
+.homeNewsLead{background:linear-gradient(135deg,#332d1d,#17150f)}.homeNewsLead .newFlag,.homeNewsList em{background:#d78b00}
+.homeNewsList span{color:#5e4810;background:#fff3bd}.homeNewsList strong{color:#292313}
+.newsSection{background:#242119}.corporateSection{background:#fffaf0}.orgGrid a{background:#292313}
+.missionCard{border-top-color:#d89b00}.missionCard h3{color:#292313}.missionCard a{color:#8c6100}
+footer{background:#17150f}footer b{color:#f5c400}
