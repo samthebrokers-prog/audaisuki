@@ -1,142 +1,36 @@
 import { notFound } from "next/navigation";
 import { regionBySlug, regions } from "../data";
 
-export function generateStaticParams() {
-  return regions.map(region => ({ slug: region.slug }));
-}
+export function generateStaticParams() { return regions.map(region => ({ slug: region.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{slug:string}> }) {
-  const { slug } = await params;
-  const region = regionBySlug[slug];
-  if (!region) return {};
-  return {
-    title: region.en + " Japanese Community | AuDaisuki",
-    description: "Jobs, housing, Japanese services, food, events and consular information for " + region.en + "."
-  };
+  const { slug } = await params; const region = regionBySlug[slug]; if (!region) return {};
+  return { title: region.en + " Japanese Community | AuDaisuki", description: "Jobs, housing, Japanese services, food, events and consular information for " + region.en + "." };
 }
 
-const communityCards = [
-  ["💼","仕事 / Jobs","Local jobs and Japanese-speaking opportunities","求人・仕事情報を探す / Explore jobs"],
-  ["🏠","住まい / Housing","Share houses, rentals and local living","住まい情報を探す / Explore housing"],
-  ["🍜","食べる / Food","Japanese restaurants, groceries and cafés","地域のお店を見る / Explore local food"],
-  ["✂️","生活サービス / Services","Beauty, health and professional services","地域サービスを見る / Explore services"],
-  ["🤝","仲間 / Community","Friends, clubs, language exchange and groups","地域団体を見る / Explore community"],
-  ["🎌","イベント / Events","Japanese and Japan–Australia local events","イベント情報を見る / Explore events"]
+const cards = [
+ ["💼","仕事 / Jobs","Local jobs and Japanese-speaking opportunities","求人・仕事情報を見る / Explore jobs"],
+ ["🏠","住まい / Housing","Share houses, rentals and local living","住まい情報を見る / Explore housing"],
+ ["🍜","食べる / Food","Japanese restaurants, groceries and cafés","地域のお店を見る / Explore local food"],
+ ["✂️","生活サービス / Services","Beauty, health and professional services","地域サービスを見る / Explore services"],
+ ["🤝","仲間 / Community","Friends, clubs, language exchange and groups","地域団体を見る / Explore community"],
+ ["🎌","イベント / Events","Japanese and Japan–Australia local events","イベント情報を見る / Explore events"]
 ];
 
 export default async function RegionPage({ params }: { params: Promise<{slug:string}> }) {
-  const { slug } = await params;
-  const region = regionBySlug[slug];
-  if (!region) notFound();
-
-  return (
-    <div className="regionShell">
-      <header className="regionTop">
-        <a href="/" className="regionBrand">AuDaisuki <span>オーストラリア大好き</span></a>
-        <a href="/locations">📍 地域一覧 / All regions</a>
-      </header>
-
-      <main className="regionPage">
-        <section className="regionHero">
-          <div>
-            <span className="regionState">{region.short}</span>
-            <h1>{region.ja}<small>{region.en}</small></h1>
-            <p>{region.introJa}</p>
-            <p className="en">{region.introEn}</p>
-          </div>
-          <aside>
-            <b>この地域で探す / Explore</b>
-            <div className="regionFocus">
-              {region.focus.map(item => <span key={item}>✓ {item}</span>)}
-            </div>
-          </aside>
-        </section>
-
-        <section className="regionCommunity">
-          <div className="regionHeading">
-            <span className="kicker">COMMUNITY</span>
-            <h2>{region.city} で暮らす <small>Life in {region.city}</small></h2>
-          </div>
-          <div className="regionCommunityGrid">
-            {communityCards.map(([icon,title,text,linkText], index) => (
-              <article key={title}>
-                <span>{icon}</span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-                <a href={index < 2 ? "/#classifieds" : index < 4 ? "#local-directory" : "#community-resources"}>{linkText} →</a>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="regionResources" id="community-resources">
-          <div className="regionHeading">
-            <span className="kicker">COMMUNITY & EDUCATION</span>
-            <h2>地域の日本人コミュニティ <small>Community, schools & useful organisations</small></h2>
-          </div>
-          <div className="regionResourceGrid">
-            {region.communityResources.map(resource => (
-              <a key={resource.name} href={resource.href} target="_blank" rel="noreferrer">
-                <span>{resource.type}</span>
-                <h3>{resource.name}</h3>
-                <p>{resource.description}</p>
-                <b>公式・団体サイト / Visit resource ↗</b>
-              </a>
-            ))}
-          </div>
-          <div className="regionReviewed">
-            <span>公開情報を確認 / Public information reviewed: 21 Sep 2026</span>
-            <a href="https://sydney.jpf.go.jp/japan-related-community-organisations-in-australia/" target="_blank" rel="noreferrer">全国の日本関連団体を探す / National community map ↗</a>
-          </div>
-        </section>
-
-        <section className="regionLocal" id="local-directory">
-          <div className="regionHeading">
-            <span className="kicker">LOCAL DIRECTORY</span>
-            <h2>日本語サービス・お店 <small>Japanese services & businesses</small></h2>
-          </div>
-          {region.localBusinesses.length > 0 ? (
-            <div className="regionBusinessGrid">
-              {region.localBusinesses.map(business => (
-                <a key={business.name} href={business.href} target="_blank" rel="noreferrer">
-                  <span>{business.type}</span>
-                  <h3>{business.name}</h3>
-                  <p>📍 {business.place}</p>
-                  <b>Website ↗</b>
-                </a>
-              ))}
-            </div>
-          ) : (
-            <div className="regionEmpty">
-              <b>地域の日本語情報 / Local Japanese community directory</b>
-              <p>地域のコミュニティ・学校・領事情報は上の確認済みリンクからご利用いただけます。店舗やサービスの推薦も歓迎します。</p>
-              <a href="/contact">地域情報を推薦する / Suggest a local listing →</a>
-            </div>
-          )}
-        </section>
-
-        <section className="regionOfficial">
-          <div>
-            <span className="kicker">OFFICIAL JAPAN</span>
-            <h2>領事・大使館情報 <small>Consular information</small></h2>
-            <h3>{region.consularName}</h3>
-            <p>管轄 / Jurisdiction: {region.consularArea}</p>
-            <p>旅券、証明、ビザ、在外届、領事出張など重要な手続は、必ず担当公館の最新情報をご確認ください。</p>
-            <a href={region.consularUrl} target="_blank" rel="noreferrer">公式サイト / Official website ↗</a>
-          </div>
-          <aside>
-            <b>AuDaisuki Official Hub</b>
-            <p>地域別の大使館・総領事館ニュース、イベント、旅券・ビザ、安全情報をまとめています。</p>
-            <a href="/official-news">公式情報ハブを見る / Official updates →</a>
-          </aside>
-        </section>
-
-        <section className="regionBuild">
-          <b>{region.city} コミュニティを一緒に育てる / Help build the {region.city} community page</b>
-          <p>地元の日本人経営ビジネス、イベント、求人、クラブ、学校、コミュニティ団体の情報を募集しています。</p>
-          <a href="/contact">情報を送る / Send local information →</a>
-        </section>
-      </main>
-    </div>
-  );
+ const { slug } = await params; const region = regionBySlug[slug]; if (!region) notFound();
+ return <div className="rpShell">
+  <style>{`
+   .rpShell{min-height:100vh;background:#fff;color:#172033}.rpTop{background:#112f50;color:#fff}.rpTopIn{max-width:1240px;margin:auto;padding:17px 14px;display:flex;align-items:center;justify-content:space-between;gap:20px}.rpBrand{font-size:26px;font-weight:900;letter-spacing:-.6px}.rpBrand b{color:#e23b43}.rpTop a:last-child{font-size:12px;font-weight:800}.rpMain{max-width:1240px;margin:auto;padding:30px 14px 70px}.rpHero{background:linear-gradient(120deg,#edf6ff 0%,#fff 58%,#fff0f1 100%);border:1px solid #e1e7ed;border-radius:22px;padding:44px 48px;display:grid;grid-template-columns:1.8fr .9fr;gap:42px;align-items:center}.rpState{display:inline-block;background:#e23b43;color:#fff;border-radius:999px;padding:6px 11px;font-size:10px;font-weight:900}.rpHero h1{color:#143c68;font-size:42px;line-height:1.08;margin:13px 0 14px;letter-spacing:-1px}.rpHero h1 small{display:block;font-size:15px;color:#718195;margin-top:9px;letter-spacing:0}.rpHero p{font-size:14px;line-height:1.7;margin:6px 0;color:#42576b}.rpHero p.en{font-size:12px;color:#718195}.rpExplore{background:#143c68;color:#fff;border-radius:18px;padding:25px}.rpExplore b{display:block;font-size:14px;margin-bottom:12px}.rpExplore span{display:block;border-top:1px solid #ffffff22;padding:9px 0;font-size:11px;color:#dce8f3}.rpSection{margin-top:48px}.rpHeading{margin-bottom:18px}.rpKicker{font-size:10px;font-weight:900;letter-spacing:.12em;color:#e23b43}.rpHeading h2{color:#143c68;font-size:29px;margin:6px 0}.rpHeading h2 small{display:block;color:#84919d;font-size:12px;font-weight:500;margin-top:4px}.rpGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.rpCard{border:1px solid #dfe5ea;border-radius:13px;padding:20px;background:#fff;min-height:160px;box-shadow:0 4px 14px #0d29420b}.rpCard>span{font-size:27px}.rpCard h3{color:#143c68;font-size:16px;margin:10px 0 7px}.rpCard p{font-size:11px;color:#687789;line-height:1.55}.rpCard a{display:inline-block;margin-top:8px;color:#e23b43;font-size:10px;font-weight:900}.rpResource{background:#f6f8fa;margin-left:-14px;margin-right:-14px;padding:38px 14px}.rpResource>.rpInner{max-width:1212px;margin:auto}.rpResourceGrid,.rpBusinessGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rpResourceGrid a,.rpBusinessGrid a{background:#fff;border:1px solid #dfe5ea;border-radius:11px;padding:18px}.rpResourceGrid span,.rpBusinessGrid span{font-size:9px;color:#e23b43;font-weight:900}.rpResourceGrid h3,.rpBusinessGrid h3{color:#143c68;font-size:15px;margin:8px 0}.rpResourceGrid p,.rpBusinessGrid p{font-size:11px;color:#687789;line-height:1.55}.rpResourceGrid b,.rpBusinessGrid b{font-size:10px;color:#e23b43}.rpReviewed{margin-top:14px;padding:13px 15px;background:#fff8ed;border:1px solid #f0dfc3;border-radius:9px;display:flex;justify-content:space-between;gap:14px;font-size:10px;color:#765f3c}.rpOfficial{margin-top:48px;background:#143c68;color:#fff;border-radius:18px;padding:30px;display:grid;grid-template-columns:1.5fr 1fr;gap:30px}.rpOfficial h2{font-size:26px;margin:7px 0 18px}.rpOfficial h2 small{display:block;color:#bfd0df;font-size:11px;margin-top:4px}.rpOfficial h3{font-size:15px}.rpOfficial p{font-size:11px;line-height:1.6;color:#d1deea}.rpOfficial a{display:inline-block;margin-top:8px;color:#fff;background:#e23b43;padding:10px 13px;border-radius:7px;font-size:10px;font-weight:900}.rpOfficial aside{border-left:1px solid #ffffff25;padding-left:26px}.rpBuild{margin-top:18px;background:#fff0f1;border:1px solid #f2d7da;border-radius:12px;padding:20px}.rpBuild b{color:#143c68}.rpBuild p{font-size:11px;color:#687789}.rpBuild a{font-size:10px;color:#e23b43;font-weight:900}.rpEmpty{border:1px solid #dfe5ea;border-radius:12px;padding:20px}.rpEmpty p{font-size:11px;color:#687789}.rpEmpty a{color:#e23b43;font-size:10px;font-weight:900}@media(max-width:800px){.rpHero,.rpOfficial{grid-template-columns:1fr}.rpHero{padding:30px 24px}.rpHero h1{font-size:34px}.rpGrid,.rpResourceGrid,.rpBusinessGrid{grid-template-columns:1fr 1fr}.rpOfficial aside{border-left:0;border-top:1px solid #ffffff25;padding:20px 0 0}.rpReviewed{display:block}.rpReviewed a{display:block;margin-top:7px}}@media(max-width:520px){.rpGrid,.rpResourceGrid,.rpBusinessGrid{grid-template-columns:1fr}.rpBrand{font-size:21px}.rpTop a:last-child{font-size:10px}.rpMain{padding-top:18px}.rpHero{padding:25px 19px}.rpHero h1{font-size:30px}}
+  `}</style>
+  <header className="rpTop"><div className="rpTopIn"><a href="/" className="rpBrand">AuDaisuki <b>I love Australia</b></a><a href="/locations">📍 地域一覧 / All regions</a></div></header>
+  <main className="rpMain">
+   <section className="rpHero"><div><span className="rpState">{region.short}</span><h1>{region.ja}<small>{region.en}</small></h1><p>{region.introJa}</p><p className="en">{region.introEn}</p></div><aside className="rpExplore"><b>この地域で探す / Explore this area</b>{region.focus.map(item=><span key={item}>✓ {item}</span>)}</aside></section>
+   <section className="rpSection"><div className="rpHeading"><span className="rpKicker">COMMUNITY</span><h2>{region.city} で暮らす <small>Life in {region.city}</small></h2></div><div className="rpGrid">{cards.map(([icon,title,text,link],i)=><article className="rpCard" key={title}><span>{icon}</span><h3>{title}</h3><p>{text}</p><a href={i<2?"/#classifieds":i<4?"#local-directory":"#community-resources"}>{link} →</a></article>)}</div></section>
+   <section className="rpSection rpResource" id="community-resources"><div className="rpInner"><div className="rpHeading"><span className="rpKicker">COMMUNITY & EDUCATION</span><h2>地域の日本人コミュニティ <small>Community, schools & useful organisations</small></h2></div><div className="rpResourceGrid">{region.communityResources.map(r=><a key={r.name} href={r.href} target="_blank" rel="noreferrer"><span>{r.type}</span><h3>{r.name}</h3><p>{r.description}</p><b>公式・団体サイト / Visit resource ↗</b></a>)}</div><div className="rpReviewed"><span>公開情報を確認 / Public information reviewed: 21 Sep 2026</span><a href="https://sydney.jpf.go.jp/japan-related-community-organisations-in-australia/" target="_blank" rel="noreferrer">全国の日本関連団体を探す / National community map ↗</a></div></div></section>
+   <section className="rpSection" id="local-directory"><div className="rpHeading"><span className="rpKicker">LOCAL DIRECTORY</span><h2>日本語サービス・お店 <small>Japanese services & businesses</small></h2></div>{region.localBusinesses.length?<div className="rpBusinessGrid">{region.localBusinesses.map(b=><a key={b.name} href={b.href} target="_blank" rel="noreferrer"><span>{b.type}</span><h3>{b.name}</h3><p>📍 {b.place}</p><b>Website ↗</b></a>)}</div>:<div className="rpEmpty"><b>地域の日本語情報 / Local Japanese community directory</b><p>地域のコミュニティ・学校・領事情報は上の確認済みリンクからご利用いただけます。店舗やサービスの推薦も歓迎します。</p><a href="/contact">地域情報を推薦する / Suggest a local listing →</a></div>}</section>
+   <section className="rpOfficial"><div><span className="rpKicker">OFFICIAL JAPAN</span><h2>領事・大使館情報 <small>Consular information</small></h2><h3>{region.consularName}</h3><p>管轄 / Jurisdiction: {region.consularArea}</p><p>旅券、証明、ビザ、在外届、領事出張など重要な手続は、必ず担当公館の最新情報をご確認ください。</p><a href={region.consularUrl} target="_blank" rel="noreferrer">公式サイト / Official website ↗</a></div><aside><b>AuDaisuki Official Hub</b><p>地域別の大使館・総領事館ニュース、イベント、旅券・ビザ、安全情報をまとめています。</p><a href="/official-news">公式情報ハブを見る / Official updates →</a></aside></section>
+   <section className="rpBuild"><b>{region.city} コミュニティを一緒に育てる / Help build the {region.city} community page</b><p>地元の日本人経営ビジネス、イベント、求人、クラブ、学校、コミュニティ団体の情報を募集しています。</p><a href="/contact">情報を送る / Send local information →</a></section>
+  </main>
+ </div>;
 }
