@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import './globals.css';
+import './inner-theme.css';
 
 export const metadata = {
   title: 'AU大好き | オーストラリア生活・日本人コミュニティ情報',
