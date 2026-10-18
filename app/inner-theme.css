@@ -38,3 +38,11 @@
 /* Kill legacy navy/blue values embedded in region-page component styles. */
 .rgShell a:not(.rgButton){text-decoration-color:#e23b43!important}
 .rgShell :is(.rgBrand,.rgCrumb a,.rgHero h1,.rgQuick a,.rgTitle h2,.rgCard h3,.rgResourceGrid h3,.rgBusinessGrid h3){color:#292929!important}
+/* Legal/about/contact/login and other inner pages: remove the old navy theme too. */
+.legalShell{background:#faf7f7!important;color:#292929!important}
+.legalHeader{background:#262626!important;color:#fff!important}
+.legalHeader .legalBrand{color:#fff!important}.legalHeader .legalBrand span{color:#e23b43!important}
+.legalContent h1,.legalContent h2,.legalContent h3{color:#292929!important}
+.legalContent .legalLead,.legalContent p,.legalContent li{color:#555!important}
+.legalContent section{border-color:#e9e2e2!important;box-shadow:0 4px 14px #5b20200a!important}
+.legalBack{color:#d52f39!important}
