@@ -15,18 +15,26 @@
 .rgHeroCopy{background:linear-gradient(120deg,#fff7f7 0%,#fff 62%,#fff1f1 100%)!important}
 .rgHero h1,.rgHero h1 small{color:#252525!important}.rgHero h1 small{color:#c92d36!important}
 .rgHeroCopy p{color:#555!important}.rgHeroCopy p:last-child{color:#777!important}
+.rgState{background:#e23b43!important;color:#fff!important}
 .rgExplore{background:linear-gradient(145deg,#2b2b2b 0%,#414141 100%)!important;color:#fff!important}
 .rgExplore span{color:#f3f3f3!important}
 .rgQuick a{color:#333!important;border-color:#e8dfdf!important}.rgQuick a:hover{color:#c92731!important;border-color:#e23b43!important}
 .rgTitle{border-bottom-color:#e23b43!important}
 .rgTitle h2,.rgCard h3,.rgResourceGrid h3,.rgBusinessGrid h3{color:#292929!important}
+.rgTitle h2 small{color:#777!important}
 .rgTitle div>span,.rgTitle>a,.rgCard a,.rgResourceGrid span,.rgBusinessGrid span,.rgResourceGrid b,.rgBusinessGrid b{color:#d52f39!important}
 .rgCard,.rgResourceGrid a,.rgBusinessGrid a{border-color:#e9e2e2!important;box-shadow:0 4px 14px #5b20200a!important}
+.rgCard:before{background:#e23b43!important}
 .rgBand{background:#faf7f7!important;border-color:#eee5e5!important}
 .rgReviewed{border-left-color:#e23b43!important}
+.rgReviewed a{color:#d52f39!important}
 .rgOfficial{background:linear-gradient(120deg,#292929,#3b3b3b)!important}
 .rgOfficial aside{background:#444!important}
 .rgOfficial .rgK{color:#ff747a!important}
 .rgButton{background:#e23b43!important}
 .rgBuild{background:#fff7f7!important;border-color:#efdada!important}
 .rgFoot{background:#262626!important}
+.rgFoot a{color:#fff!important}
+/* Kill legacy navy/blue values embedded in region-page component styles. */
+.rgShell a:not(.rgButton){text-decoration-color:#e23b43!important}
+.rgShell :is(.rgBrand,.rgCrumb a,.rgHero h1,.rgQuick a,.rgTitle h2,.rgCard h3,.rgResourceGrid h3,.rgBusinessGrid h3){color:#292929!important}
