@@ -1,20 +1,32 @@
-/* Keep AuDaisuki region pages visually consistent with the light red/navy homepage. */
-.rgShell{background:#fff!important;color:#172033!important}
-.rgUtility{background:#112f50!important}
+/* AuDaisuki inner pages: warm white/red/charcoal theme matching the homepage. */
+.rgShell{background:#fff!important;color:#242424!important}
+.rgUtility{background:#262626!important;color:#f3f3f3!important}
 .rgHead{background:#fff!important}
-.rgBrand{color:#143c68!important}.rgBrand b{color:#e23b43!important}
-.rgNav{background:#fff!important;color:#183d63!important;border-top:1px solid #dfe5eb!important;border-bottom:1px solid #dfe5eb!important}
-.rgNav a{color:#183d63!important;border-right:1px solid #edf0f3!important}
-.rgNav a span{color:#7b8794!important}
-.rgNav a:hover{background:#fff5f5!important;color:#e23b43!important}
+.rgBrand{color:#242424!important}.rgBrand b{color:#e23b43!important}
+.rgTag{color:#777!important}
+.rgNav{background:#fff!important;color:#292929!important;border-top:1px solid #e7e2e2!important;border-bottom:2px solid #e23b43!important}
+.rgNav a{color:#292929!important;border-right:1px solid #eee8e8!important}
+.rgNav a span{color:#888!important}
+.rgNav a:hover{background:#fff3f3!important;color:#c92731!important}
 .rgNav a:last-child{background:#e23b43!important;color:#fff!important}
-.rgNav a:last-child span{color:#fff!important;opacity:.85}
-.rgHero{border-color:#e6ebf0!important;box-shadow:0 8px 24px #112f5012!important}
-.rgHeroCopy{background:linear-gradient(120deg,#edf6ff 0%,#fff 58%,#fff0f1 100%)!important}
-.rgExplore{background:linear-gradient(145deg,#143c68 0%,#1c527f 100%)!important}
-.rgBand{background:#f6f8fa!important}
-.rgOfficial{background:linear-gradient(120deg,#112f50,#143c68)!important}
-.rgOfficial aside{background:#173f69!important}
-.rgFoot{background:#0d2945!important}
-.rgCard,.rgResourceGrid a,.rgBusinessGrid a{box-shadow:0 4px 14px #0d29420b!important}
+.rgNav a:last-child span{color:#fff!important;opacity:.88}
+.rgCrumb,.rgCrumb a{color:#6e6e6e!important}.rgCrumb a{font-weight:800!important}
+.rgHero{border-color:#eadfdf!important;box-shadow:0 8px 24px #5b20200d!important}
+.rgHeroCopy{background:linear-gradient(120deg,#fff7f7 0%,#fff 62%,#fff1f1 100%)!important}
+.rgHero h1,.rgHero h1 small{color:#252525!important}.rgHero h1 small{color:#c92d36!important}
+.rgHeroCopy p{color:#555!important}.rgHeroCopy p:last-child{color:#777!important}
+.rgExplore{background:linear-gradient(145deg,#2b2b2b 0%,#414141 100%)!important;color:#fff!important}
+.rgExplore span{color:#f3f3f3!important}
+.rgQuick a{color:#333!important;border-color:#e8dfdf!important}.rgQuick a:hover{color:#c92731!important;border-color:#e23b43!important}
 .rgTitle{border-bottom-color:#e23b43!important}
+.rgTitle h2,.rgCard h3,.rgResourceGrid h3,.rgBusinessGrid h3{color:#292929!important}
+.rgTitle div>span,.rgTitle>a,.rgCard a,.rgResourceGrid span,.rgBusinessGrid span,.rgResourceGrid b,.rgBusinessGrid b{color:#d52f39!important}
+.rgCard,.rgResourceGrid a,.rgBusinessGrid a{border-color:#e9e2e2!important;box-shadow:0 4px 14px #5b20200a!important}
+.rgBand{background:#faf7f7!important;border-color:#eee5e5!important}
+.rgReviewed{border-left-color:#e23b43!important}
+.rgOfficial{background:linear-gradient(120deg,#292929,#3b3b3b)!important}
+.rgOfficial aside{background:#444!important}
+.rgOfficial .rgK{color:#ff747a!important}
+.rgButton{background:#e23b43!important}
+.rgBuild{background:#fff7f7!important;border-color:#efdada!important}
+.rgFoot{background:#262626!important}
