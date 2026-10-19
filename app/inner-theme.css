@@ -1,56 +1,19 @@
-/* AuDaisuki inner pages: force one consistent warm white/red/charcoal theme. */
-body .rgShell{background:#fff!important;color:#242424!important}
-body .rgShell .rgUtility{background:#262626!important;color:#f3f3f3!important}
-body .rgShell .rgHead{background:#fff!important;border-bottom:1px solid #e8e2e2!important}
-body .rgShell .rgBrand{color:#242424!important}
-body .rgShell .rgBrand b{color:#e23b43!important}
-body .rgShell .rgTag{color:#777!important}
-body .rgShell .rgNav{background:#fff!important;color:#292929!important;border-top:1px solid #e7e2e2!important;border-bottom:2px solid #e23b43!important}
-body .rgShell .rgNav a{background:#fff!important;color:#292929!important;border-right:1px solid #eee8e8!important}
-body .rgShell .rgNav a span{color:#888!important}
-body .rgShell .rgNav a:hover{background:#fff3f3!important;color:#c92731!important}
-body .rgShell .rgNav a:last-child{background:#e23b43!important;color:#fff!important}
-body .rgShell .rgNav a:last-child span{color:#fff!important;opacity:.88}
-body .rgShell .rgCrumb,body .rgShell .rgCrumb a{color:#6e6e6e!important}
-body .rgShell .rgCrumb a{font-weight:800!important}
-body .rgShell .rgHero{border-color:#eadfdf!important;box-shadow:0 8px 24px #5b20200d!important}
-body .rgShell .rgHeroCopy{background:linear-gradient(120deg,#fff7f7 0%,#fff 62%,#fff1f1 100%)!important}
-body .rgShell .rgHero h1{color:#252525!important}
-body .rgShell .rgHero h1 small{color:#c92d36!important}
-body .rgShell .rgHeroCopy p{color:#555!important}
-body .rgShell .rgHeroCopy p:last-child{color:#777!important}
-body .rgShell .rgState{background:#e23b43!important;color:#fff!important}
-body .rgShell .rgExplore{background:linear-gradient(145deg,#2b2b2b 0%,#414141 100%)!important;color:#fff!important}
-body .rgShell .rgExplore span{color:#f3f3f3!important}
-body .rgShell .rgQuick a{background:#fff!important;color:#333!important;border-color:#e8dfdf!important;box-shadow:0 3px 10px #5b202008!important}
-body .rgShell .rgQuick a:hover{color:#c92731!important;border-color:#e23b43!important}
-body .rgShell .rgTitle{border-bottom-color:#e23b43!important}
-body .rgShell .rgTitle h2,body .rgShell .rgCard h3,body .rgShell .rgResourceGrid h3,body .rgShell .rgBusinessGrid h3{color:#292929!important}
-body .rgShell .rgTitle h2 small{color:#777!important}
-body .rgShell .rgTitle div>span,body .rgShell .rgTitle>a,body .rgShell .rgCard a,body .rgShell .rgResourceGrid span,body .rgShell .rgBusinessGrid span,body .rgShell .rgResourceGrid b,body .rgShell .rgBusinessGrid b{color:#d52f39!important}
-body .rgShell .rgCard,body .rgShell .rgResourceGrid a,body .rgShell .rgBusinessGrid a{background:#fff!important;border-color:#e9e2e2!important;box-shadow:0 4px 14px #5b20200a!important}
-body .rgShell .rgCard:before{background:#e23b43!important}
-body .rgShell .rgBand{background:#faf7f7!important;border-color:#eee5e5!important}
-body .rgShell .rgReviewed{background:#fff!important;border-left-color:#e23b43!important}
-body .rgShell .rgReviewed a{color:#d52f39!important}
-body .rgShell .rgOfficial{background:linear-gradient(120deg,#292929,#3b3b3b)!important;color:#fff!important}
-body .rgShell .rgOfficial aside{background:#444!important}
-body .rgShell .rgOfficial .rgK{color:#ff747a!important}
-body .rgShell .rgOfficial p{color:#eee!important}
-body .rgShell .rgButton{background:#e23b43!important;color:#fff!important}
-body .rgShell .rgBuild{background:#fff7f7!important;border-color:#efdada!important}
-body .rgShell .rgFoot{background:#262626!important;color:#f3f3f3!important}
-body .rgShell .rgFoot a{color:#fff!important}
+/* AuDaisuki inner pages — clean warm white/red/charcoal system. */
+.rgShell{min-height:100vh;background:#fff;color:#292929}
+.rgUtility{background:#262626;color:#f3f3f3;font-size:11px}.rgUtilityIn,.rgHeadIn,.rgNavIn,.rgMain,.rgBandIn,.rgFootIn{max-width:1240px;margin:auto}.rgUtilityIn{padding:7px 16px;display:flex;justify-content:space-between}
+.rgHead{background:#fff;border-bottom:1px solid #e8e2e2}.rgHeadIn{padding:16px;display:flex;align-items:center;justify-content:space-between;gap:20px}.rgBrand{font-size:34px;font-weight:900;letter-spacing:-1.2px;color:#242424}.rgBrand b{color:#e23b43}.rgTag{font-size:11px;color:#777;text-align:right;line-height:1.5}
+.rgNav{background:#fff;color:#292929;border-top:1px solid #e7e2e2;border-bottom:2px solid #e23b43}.rgNavIn{display:flex;align-items:stretch;overflow:auto}.rgNav a{min-width:max-content;padding:11px 16px;color:#292929;border-right:1px solid #eee8e8;font-size:11px;font-weight:800}.rgNav a span{display:block;font-size:9px;font-weight:500;color:#888;margin-top:2px}.rgNav a:hover{background:#fff3f3;color:#c92731}.rgNav a:last-child{margin-left:auto;background:#e23b43;color:#fff}.rgNav a:last-child span{color:#fff;opacity:.88}
+.rgMain{padding:22px 16px 64px}.rgCrumb{font-size:10px;color:#6e6e6e;margin:0 0 13px}.rgCrumb a{color:#6e6e6e;font-weight:800}
+.rgHero{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.72fr);border:1px solid #eadfdf;border-radius:18px;overflow:hidden;box-shadow:0 8px 24px #5b20200d}.rgHeroCopy{padding:30px 38px;background:linear-gradient(120deg,#fff7f7 0%,#fff 62%,#fff1f1 100%)}.rgState{display:inline-block;background:#e23b43;color:#fff;border-radius:999px;padding:5px 10px;font-size:9px;font-weight:900;letter-spacing:.08em}.rgHero h1{font-size:38px;line-height:1.08;color:#252525;margin:11px 0 7px;letter-spacing:-1px}.rgHero h1 small{display:block;font-size:17px;color:#c92d36;margin-top:7px;letter-spacing:0}.rgHeroCopy p{max-width:760px;font-size:13px;line-height:1.65;color:#555;margin:7px 0}.rgHeroCopy p:last-child{font-size:11px;color:#777}.rgExplore{background:linear-gradient(145deg,#2b2b2b 0%,#414141 100%);color:#fff;padding:25px 27px;display:flex;flex-direction:column;justify-content:center}.rgExplore strong{font-size:14px;margin-bottom:8px}.rgExplore span{padding:7px 0;border-top:1px solid #ffffff20;font-size:10px;color:#f3f3f3}
+.rgQuick{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;margin-top:13px}.rgQuick a{background:#fff;border:1px solid #e8dfdf;border-radius:10px;padding:11px 8px;text-align:center;color:#333;font-size:10px;font-weight:900;box-shadow:0 3px 10px #5b202008}.rgQuick a:hover{border-color:#e23b43;color:#c92731}
+.rgSection{padding-top:35px}.rgTitle{display:flex;align-items:end;justify-content:space-between;gap:20px;border-bottom:2px solid #e23b43;padding-bottom:9px;margin-bottom:15px}.rgTitle div>span{color:#d52f39;font-size:9px;font-weight:900;letter-spacing:.14em}.rgTitle h2{font-size:25px;color:#292929;margin:3px 0 0}.rgTitle h2 small{font-size:12px;color:#777;font-weight:500;margin-left:8px}.rgTitle>a{font-size:10px;color:#d52f39;font-weight:900}
+.rgGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rgCard{border:1px solid #e9e2e2;border-radius:12px;padding:17px 18px;background:#fff;min-height:142px;position:relative;box-shadow:0 4px 14px #5b20200a}.rgCard:before{content:'';position:absolute;left:0;top:18px;width:3px;height:34px;background:#e23b43}.rgIcon{font-size:22px}.rgCard h3{font-size:15px;color:#292929;margin:8px 0 5px}.rgCard p{font-size:10px;line-height:1.5;color:#666;margin:0}.rgCard a{display:inline-block;margin-top:9px;font-size:9px;color:#d52f39;font-weight:900}
+.rgBand{margin-top:35px;background:#faf7f7;border-top:1px solid #eee5e5;border-bottom:1px solid #eee5e5}.rgBandIn{padding:32px 16px}.rgResourceGrid,.rgBusinessGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.rgResourceGrid a,.rgBusinessGrid a{background:#fff;border:1px solid #e9e2e2;border-radius:10px;padding:16px;box-shadow:0 4px 14px #5b20200a}.rgResourceGrid span,.rgBusinessGrid span{font-size:8px;color:#d52f39;font-weight:900;text-transform:uppercase}.rgResourceGrid h3,.rgBusinessGrid h3{font-size:14px;color:#292929;margin:7px 0}.rgResourceGrid p,.rgBusinessGrid p{font-size:10px;color:#666;line-height:1.5}.rgResourceGrid b,.rgBusinessGrid b{font-size:9px;color:#d52f39}.rgReviewed{margin-top:12px;background:#fff;border-left:3px solid #e23b43;padding:10px 12px;display:flex;justify-content:space-between;gap:15px;font-size:9px;color:#666}.rgReviewed a{color:#d52f39}
+.rgOfficial{margin-top:35px;display:grid;grid-template-columns:1.5fr .8fr;background:linear-gradient(120deg,#292929,#3b3b3b);color:#fff;border-radius:15px;overflow:hidden}.rgOfficial>div{padding:26px 30px}.rgOfficial aside{padding:26px;background:#444}.rgOfficial .rgK{color:#ff747a;font-size:9px;font-weight:900;letter-spacing:.14em}.rgOfficial h2{font-size:23px;margin:5px 0 14px}.rgOfficial h2 small{display:block;font-size:10px;color:#ddd;margin-top:4px}.rgOfficial h3{font-size:14px}.rgOfficial p{font-size:10px;line-height:1.6;color:#eee}.rgButton{display:inline-block;background:#e23b43;color:#fff!important;border-radius:7px;padding:9px 12px;font-size:9px;font-weight:900;margin-top:5px}
+.rgEmpty,.rgBuild{border:1px solid #e9e2e2;border-radius:11px;padding:17px;background:#fff}.rgEmpty p,.rgBuild p{font-size:10px;color:#666}.rgEmpty a,.rgBuild a{font-size:9px;color:#d52f39;font-weight:900}.rgBuild{margin-top:14px;background:#fff7f7;border-color:#efdada}
+.rgFoot{margin-top:45px;background:#262626;color:#f3f3f3}.rgFootIn{padding:24px 16px;display:flex;justify-content:space-between;gap:20px;font-size:10px}.rgFoot b,.rgFoot a{color:#fff}.rgFoot a{margin-left:14px}
+@media(max-width:900px){.rgHero{grid-template-columns:1fr}.rgQuick{grid-template-columns:repeat(3,1fr)}.rgGrid,.rgResourceGrid,.rgBusinessGrid{grid-template-columns:1fr 1fr}.rgOfficial{grid-template-columns:1fr}.rgTag{display:none}.rgNav a:last-child{margin-left:0}}
+@media(max-width:600px){.rgUtility{display:none}.rgHeadIn{padding:12px 14px}.rgBrand{font-size:26px}.rgNav a{padding:9px 12px}.rgMain{padding:14px 12px 45px}.rgHeroCopy{padding:23px 20px}.rgHero h1{font-size:30px}.rgHero h1 small{font-size:14px}.rgExplore{padding:20px}.rgQuick{grid-template-columns:repeat(2,1fr)}.rgGrid,.rgResourceGrid,.rgBusinessGrid{grid-template-columns:1fr}.rgTitle{align-items:start}.rgTitle h2{font-size:21px}.rgTitle h2 small{display:block;margin:3px 0 0}.rgReviewed,.rgFootIn{display:block}.rgReviewed a{display:block;margin-top:6px}.rgFoot a{display:inline-block;margin:8px 10px 0 0}}
 
-/* Prevent legacy navy/blue values embedded in the region component from winning. */
-body .rgShell :is(.rgBrand,.rgCrumb a,.rgHero h1,.rgQuick a,.rgTitle h2,.rgCard h3,.rgResourceGrid h3,.rgBusinessGrid h3){color:#292929!important}
-
-/* Legal/about/contact/login and other inner pages. */
-body .legalShell{background:#faf7f7!important;color:#292929!important}
-body .legalHeader{background:#262626!important;color:#fff!important}
-body .legalHeader .legalBrand{color:#fff!important}
-body .legalHeader .legalBrand span{color:#e23b43!important}
-body .legalContent h1,body .legalContent h2,body .legalContent h3{color:#292929!important}
-body .legalContent .legalLead,body .legalContent p,body .legalContent li{color:#555!important}
-body .legalContent section{border-color:#e9e2e2!important;box-shadow:0 4px 14px #5b20200a!important}
-body .legalBack{color:#d52f39!important}
+/* Legal/about/contact/login inner pages. */
+body .legalShell{background:#faf7f7!important;color:#292929!important}body .legalHeader{background:#262626!important;color:#fff!important}body .legalHeader .legalBrand{color:#fff!important}body .legalHeader .legalBrand span{color:#e23b43!important}body .legalContent h1,body .legalContent h2,body .legalContent h3{color:#292929!important}body .legalContent .legalLead,body .legalContent p,body .legalContent li{color:#555!important}body .legalContent section{border-color:#e9e2e2!important;box-shadow:0 4px 14px #5b20200a!important}body .legalBack{color:#d52f39!important}
