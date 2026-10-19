@@ -1,48 +1,56 @@
-/* AuDaisuki inner pages: warm white/red/charcoal theme matching the homepage. */
-.rgShell{background:#fff!important;color:#242424!important}
-.rgUtility{background:#262626!important;color:#f3f3f3!important}
-.rgHead{background:#fff!important}
-.rgBrand{color:#242424!important}.rgBrand b{color:#e23b43!important}
-.rgTag{color:#777!important}
-.rgNav{background:#fff!important;color:#292929!important;border-top:1px solid #e7e2e2!important;border-bottom:2px solid #e23b43!important}
-.rgNav a{color:#292929!important;border-right:1px solid #eee8e8!important}
-.rgNav a span{color:#888!important}
-.rgNav a:hover{background:#fff3f3!important;color:#c92731!important}
-.rgNav a:last-child{background:#e23b43!important;color:#fff!important}
-.rgNav a:last-child span{color:#fff!important;opacity:.88}
-.rgCrumb,.rgCrumb a{color:#6e6e6e!important}.rgCrumb a{font-weight:800!important}
-.rgHero{border-color:#eadfdf!important;box-shadow:0 8px 24px #5b20200d!important}
-.rgHeroCopy{background:linear-gradient(120deg,#fff7f7 0%,#fff 62%,#fff1f1 100%)!important}
-.rgHero h1,.rgHero h1 small{color:#252525!important}.rgHero h1 small{color:#c92d36!important}
-.rgHeroCopy p{color:#555!important}.rgHeroCopy p:last-child{color:#777!important}
-.rgState{background:#e23b43!important;color:#fff!important}
-.rgExplore{background:linear-gradient(145deg,#2b2b2b 0%,#414141 100%)!important;color:#fff!important}
-.rgExplore span{color:#f3f3f3!important}
-.rgQuick a{color:#333!important;border-color:#e8dfdf!important}.rgQuick a:hover{color:#c92731!important;border-color:#e23b43!important}
-.rgTitle{border-bottom-color:#e23b43!important}
-.rgTitle h2,.rgCard h3,.rgResourceGrid h3,.rgBusinessGrid h3{color:#292929!important}
-.rgTitle h2 small{color:#777!important}
-.rgTitle div>span,.rgTitle>a,.rgCard a,.rgResourceGrid span,.rgBusinessGrid span,.rgResourceGrid b,.rgBusinessGrid b{color:#d52f39!important}
-.rgCard,.rgResourceGrid a,.rgBusinessGrid a{border-color:#e9e2e2!important;box-shadow:0 4px 14px #5b20200a!important}
-.rgCard:before{background:#e23b43!important}
-.rgBand{background:#faf7f7!important;border-color:#eee5e5!important}
-.rgReviewed{border-left-color:#e23b43!important}
-.rgReviewed a{color:#d52f39!important}
-.rgOfficial{background:linear-gradient(120deg,#292929,#3b3b3b)!important}
-.rgOfficial aside{background:#444!important}
-.rgOfficial .rgK{color:#ff747a!important}
-.rgButton{background:#e23b43!important}
-.rgBuild{background:#fff7f7!important;border-color:#efdada!important}
-.rgFoot{background:#262626!important}
-.rgFoot a{color:#fff!important}
-/* Kill legacy navy/blue values embedded in region-page component styles. */
-.rgShell a:not(.rgButton){text-decoration-color:#e23b43!important}
-.rgShell :is(.rgBrand,.rgCrumb a,.rgHero h1,.rgQuick a,.rgTitle h2,.rgCard h3,.rgResourceGrid h3,.rgBusinessGrid h3){color:#292929!important}
-/* Legal/about/contact/login and other inner pages: remove the old navy theme too. */
-.legalShell{background:#faf7f7!important;color:#292929!important}
-.legalHeader{background:#262626!important;color:#fff!important}
-.legalHeader .legalBrand{color:#fff!important}.legalHeader .legalBrand span{color:#e23b43!important}
-.legalContent h1,.legalContent h2,.legalContent h3{color:#292929!important}
-.legalContent .legalLead,.legalContent p,.legalContent li{color:#555!important}
-.legalContent section{border-color:#e9e2e2!important;box-shadow:0 4px 14px #5b20200a!important}
-.legalBack{color:#d52f39!important}
+/* AuDaisuki inner pages: force one consistent warm white/red/charcoal theme. */
+body .rgShell{background:#fff!important;color:#242424!important}
+body .rgShell .rgUtility{background:#262626!important;color:#f3f3f3!important}
+body .rgShell .rgHead{background:#fff!important;border-bottom:1px solid #e8e2e2!important}
+body .rgShell .rgBrand{color:#242424!important}
+body .rgShell .rgBrand b{color:#e23b43!important}
+body .rgShell .rgTag{color:#777!important}
+body .rgShell .rgNav{background:#fff!important;color:#292929!important;border-top:1px solid #e7e2e2!important;border-bottom:2px solid #e23b43!important}
+body .rgShell .rgNav a{background:#fff!important;color:#292929!important;border-right:1px solid #eee8e8!important}
+body .rgShell .rgNav a span{color:#888!important}
+body .rgShell .rgNav a:hover{background:#fff3f3!important;color:#c92731!important}
+body .rgShell .rgNav a:last-child{background:#e23b43!important;color:#fff!important}
+body .rgShell .rgNav a:last-child span{color:#fff!important;opacity:.88}
+body .rgShell .rgCrumb,body .rgShell .rgCrumb a{color:#6e6e6e!important}
+body .rgShell .rgCrumb a{font-weight:800!important}
+body .rgShell .rgHero{border-color:#eadfdf!important;box-shadow:0 8px 24px #5b20200d!important}
+body .rgShell .rgHeroCopy{background:linear-gradient(120deg,#fff7f7 0%,#fff 62%,#fff1f1 100%)!important}
+body .rgShell .rgHero h1{color:#252525!important}
+body .rgShell .rgHero h1 small{color:#c92d36!important}
+body .rgShell .rgHeroCopy p{color:#555!important}
+body .rgShell .rgHeroCopy p:last-child{color:#777!important}
+body .rgShell .rgState{background:#e23b43!important;color:#fff!important}
+body .rgShell .rgExplore{background:linear-gradient(145deg,#2b2b2b 0%,#414141 100%)!important;color:#fff!important}
+body .rgShell .rgExplore span{color:#f3f3f3!important}
+body .rgShell .rgQuick a{background:#fff!important;color:#333!important;border-color:#e8dfdf!important;box-shadow:0 3px 10px #5b202008!important}
+body .rgShell .rgQuick a:hover{color:#c92731!important;border-color:#e23b43!important}
+body .rgShell .rgTitle{border-bottom-color:#e23b43!important}
+body .rgShell .rgTitle h2,body .rgShell .rgCard h3,body .rgShell .rgResourceGrid h3,body .rgShell .rgBusinessGrid h3{color:#292929!important}
+body .rgShell .rgTitle h2 small{color:#777!important}
+body .rgShell .rgTitle div>span,body .rgShell .rgTitle>a,body .rgShell .rgCard a,body .rgShell .rgResourceGrid span,body .rgShell .rgBusinessGrid span,body .rgShell .rgResourceGrid b,body .rgShell .rgBusinessGrid b{color:#d52f39!important}
+body .rgShell .rgCard,body .rgShell .rgResourceGrid a,body .rgShell .rgBusinessGrid a{background:#fff!important;border-color:#e9e2e2!important;box-shadow:0 4px 14px #5b20200a!important}
+body .rgShell .rgCard:before{background:#e23b43!important}
+body .rgShell .rgBand{background:#faf7f7!important;border-color:#eee5e5!important}
+body .rgShell .rgReviewed{background:#fff!important;border-left-color:#e23b43!important}
+body .rgShell .rgReviewed a{color:#d52f39!important}
+body .rgShell .rgOfficial{background:linear-gradient(120deg,#292929,#3b3b3b)!important;color:#fff!important}
+body .rgShell .rgOfficial aside{background:#444!important}
+body .rgShell .rgOfficial .rgK{color:#ff747a!important}
+body .rgShell .rgOfficial p{color:#eee!important}
+body .rgShell .rgButton{background:#e23b43!important;color:#fff!important}
+body .rgShell .rgBuild{background:#fff7f7!important;border-color:#efdada!important}
+body .rgShell .rgFoot{background:#262626!important;color:#f3f3f3!important}
+body .rgShell .rgFoot a{color:#fff!important}
+
+/* Prevent legacy navy/blue values embedded in the region component from winning. */
+body .rgShell :is(.rgBrand,.rgCrumb a,.rgHero h1,.rgQuick a,.rgTitle h2,.rgCard h3,.rgResourceGrid h3,.rgBusinessGrid h3){color:#292929!important}
+
+/* Legal/about/contact/login and other inner pages. */
+body .legalShell{background:#faf7f7!important;color:#292929!important}
+body .legalHeader{background:#262626!important;color:#fff!important}
+body .legalHeader .legalBrand{color:#fff!important}
+body .legalHeader .legalBrand span{color:#e23b43!important}
+body .legalContent h1,body .legalContent h2,body .legalContent h3{color:#292929!important}
+body .legalContent .legalLead,body .legalContent p,body .legalContent li{color:#555!important}
+body .legalContent section{border-color:#e9e2e2!important;box-shadow:0 4px 14px #5b20200a!important}
+body .legalBack{color:#d52f39!important}
