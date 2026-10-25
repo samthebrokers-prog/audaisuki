@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about',
     '/locations',
+    '/classifieds',
     '/official-news',
     '/contact',
     '/privacy',
@@ -20,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPages.map((path, index) => ({
       url: `${base}${path}`,
       lastModified: now,
-      changeFrequency: (path === '' || path === '/official-news' ? 'daily' : 'weekly') as 'daily' | 'weekly',
+      changeFrequency: (path === '' || path === '/official-news' || path === '/classifieds' ? 'daily' : 'weekly') as 'daily' | 'weekly',
       priority: index === 0 ? 1 : 0.8,
     })),
     ...regions.map((region) => ({
