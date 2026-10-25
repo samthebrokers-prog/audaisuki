@@ -1,6 +1,7 @@
 export const metadata = {
   title: "クラシファイド掲示板 | Jobs, Housing, Buy & Sell | AU大好き",
-  description: "オーストラリア在住・渡航予定の日本人向けクラシファイド。仕事、住まい、売買、友達・コミュニティ、イベント情報。"
+  description: "オーストラリア在住・渡航予定の日本人向けクラシファイド。仕事、住まい、売買、友達・コミュニティ、イベント情報。",
+  alternates: { canonical: "https://audaisuki.com/classifieds" }
 };
 
 const categories = [
