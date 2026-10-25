@@ -14,6 +14,13 @@ const categories = [
 
 const regions=["Australia / 全国","Sydney / NSW","Melbourne / VIC","Brisbane / QLD","Gold Coast / QLD","Perth / WA","Adelaide / SA","Canberra / ACT","Tasmania / TAS","Darwin / NT"];
 
+const usefulNow = [
+  {tag:"求人 / Jobs", place:"Australia", title:"日本語対応の求人情報を探す", en:"Current Japanese-friendly jobs across Australia", note:"外部の公開求人情報。応募条件・給与・雇用主は応募前に必ず確認してください。", href:"https://www.nihonaustralia.com/ja/posts/jobs"},
+  {tag:"仕事 / Opportunity", place:"Sydney / Melbourne", title:"国際交流基金シドニー — 採用・機会", en:"Japan Foundation Sydney — jobs and opportunities", note:"国際交流基金の公式募集ページ。", href:"https://sydney.jpf.go.jp/opportunities/work-with-us/"},
+  {tag:"コミュニティ / Community", place:"Perth / WA", title:"パース日本人コミュニティ掲示板", en:"Perth Japanese community board", note:"求人、住まい、売買、質問など、WAの地域情報を確認できます。", href:"https://perthnews.com.au/"},
+  {tag:"生活情報 / Community", place:"Australia", title:"日豪プレス — クラシファイド", en:"Nichigo Press community classifieds", note:"求人、住まい、売買、サークルなどの公開情報。", href:"https://nichigopress.jp/"},
+];
+
 export default function ClassifiedsPage(){return <div style={{maxWidth:1180,margin:"0 auto",padding:"0 20px 60px",fontFamily:"Arial, sans-serif",color:"#20242a"}}>
   <header style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"24px 0",borderBottom:"1px solid #e6e6e6"}}>
     <a href="/" style={{fontWeight:900,fontSize:28,textDecoration:"none",color:"#c62828"}}>AU大好き <small style={{fontSize:13,color:"#555"}}>Australia Community</small></a>
@@ -37,6 +44,13 @@ export default function ClassifiedsPage(){return <div style={{maxWidth:1180,marg
         <div style={{fontSize:32}}>{c.icon}</div><h2 style={{margin:"10px 0 3px",fontSize:22}}>{c.ja}</h2><b style={{color:"#777"}}>{c.en}</b><p style={{lineHeight:1.6,minHeight:50}}>{c.text}</p>
         <a href={c.href} style={{color:"#b71c1c",fontWeight:800,textDecoration:"none"}}>このカテゴリーに掲載する / Post →</a>
       </article>)}
+    </section>
+
+    <section style={{marginTop:38}}>
+      <div style={{fontSize:13,fontWeight:800,letterSpacing:1.3,color:"#c62828"}}>USEFUL NOW / 今使える情報</div>
+      <h2 style={{fontSize:30,margin:"7px 0 6px"}}>現在利用できる仕事・生活・コミュニティ情報</h2>
+      <p style={{color:"#666",lineHeight:1.6,maxWidth:820}}>AU大好き自身の投稿が増えるまで、確認できる公開情報への入口も掲載します。外部掲載はAU大好きによる推薦・保証ではありません。</p>
+      <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(250px,1fr))",gap:14,marginTop:18}}>{usefulNow.map(x=><article key={x.href} style={{border:"1px solid #e4e4e4",borderRadius:10,padding:20,background:"#fff"}}><div style={{display:"flex",justifyContent:"space-between",gap:8,fontSize:12,fontWeight:800,color:"#777"}}><span>{x.tag}</span><span>📍 {x.place}</span></div><h3 style={{fontSize:20,margin:"12px 0 4px"}}>{x.title}</h3><b style={{fontSize:14,color:"#666"}}>{x.en}</b><p style={{fontSize:14,lineHeight:1.6}}>{x.note}</p><a href={x.href} target="_blank" rel="noreferrer" style={{color:"#b71c1c",fontWeight:800,textDecoration:"none"}}>情報を見る / View source ↗</a></article>)}</div>
     </section>
 
     <section style={{marginTop:34,padding:24,borderRadius:12,background:"#f7f4ef"}}>
