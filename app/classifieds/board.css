@@ -1,0 +1,30 @@
+.board{max-width:1100px;margin:0 auto;padding:0 16px 48px;font-family:inherit}
+.boardNotice{background:#fff8e1;border:1px solid #f1c232;border-radius:14px;padding:16px 18px;margin:20px 0}
+.boardNotice p{margin:6px 0 0;line-height:1.7}.boardNotice .en{color:#555;font-size:.92em}
+.boardSuccess{background:#e8f5e9;border:1px solid #81c784;border-radius:14px;padding:14px 18px;margin:16px 0;line-height:1.8}
+.boardTabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.boardTabs button{border:1px solid #ddd;background:#fff;border-radius:999px;padding:8px 14px;cursor:pointer;font-weight:700;display:flex;flex-direction:column;align-items:flex-start;line-height:1.2}
+.boardTabs button small{font-weight:400;color:#777;font-size:.75em}
+.boardTabs button.on{background:#1f1f1f;color:#fff;border-color:#1f1f1f}.boardTabs button.on small{color:#ddd}
+.boardBar{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;margin-bottom:16px}
+.boardBar select{padding:10px 12px;border-radius:10px;border:1px solid #ccc;background:#fff}
+.boardPostBtn{background:#f2b705;color:#1f1f1f;border:0;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer}
+.boardForm{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#fff;border:1px solid #e5e5e5;border-radius:16px;padding:18px;margin-bottom:20px}
+.boardForm label{display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:.92em}
+.boardForm .wide{grid-column:1/-1}
+.boardForm input,.boardForm select,.boardForm textarea{padding:10px;border:1px solid #ccc;border-radius:10px;font:inherit;font-weight:400}
+.boardForm .check{flex-direction:row;align-items:flex-start;gap:8px;font-weight:400}
+.boardForm .hp{position:absolute;left:-9999px;width:1px;height:1px}
+.boardForm button{grid-column:1/-1;background:#1f1f1f;color:#fff;border:0;border-radius:10px;padding:12px;font-weight:800;cursor:pointer}
+.boardError{grid-column:1/-1;color:#b00020;margin:0}
+.boardEmpty{text-align:center;padding:40px 10px;color:#666}
+.boardList{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.boardList article{background:#fff;border:1px solid #e5e5e5;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.boardList h3{margin:0;font-size:1.08em}.boardList p{margin:0;line-height:1.7;white-space:pre-wrap;word-break:break-word}
+.boardMeta{display:flex;flex-wrap:wrap;gap:8px;font-size:.8em;color:#666}
+.boardMeta span{background:#f5f5f5;border-radius:999px;padding:2px 8px}
+.boardFoot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:.88em;margin-top:auto;word-break:break-all}
+.boardFoot button{margin-left:auto;background:none;border:1px solid #ddd;border-radius:8px;padding:4px 8px;cursor:pointer;font-size:.85em}
+.boardId{color:#aaa;font-size:.72em}
+.boardDelete{display:block;margin:24px auto 0;background:none;border:0;color:#777;text-decoration:underline;cursor:pointer}
+@media (max-width:640px){.boardForm{grid-template-columns:1fr}}
