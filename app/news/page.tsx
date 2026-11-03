@@ -16,6 +16,8 @@ type Item = {
   summaryJa: string;
   tag: string;
   titleEn: string;
+  easyEn?: string;
+  words?: { en: string; ja: string }[];
   source: string;
   link: string;
   publishedAt: string;
@@ -62,7 +64,7 @@ export default async function NewsPage() {
           <span className="kicker">AUSTRALIA NEWS IN JAPANESE</span>
           <h1>オーストラリアニュース<br /><small>Today&apos;s Australian news, in Japanese</small></h1>
           <p>ワーキングホリデー、留学生、在住の日本人のために、オーストラリアの最新ニュースを毎日日本語でお届けします。</p>
-          <p className="en">Short Japanese summaries of the day&apos;s Australian news, updated twice a day, with a link to the full English story.</p>
+          <p className="en">Short Japanese summaries of the day&apos;s Australian news, updated twice a day, with an easy-English version, key words, and a link to the full English story.</p>
         </div>
 
         <section>
@@ -84,6 +86,17 @@ export default async function NewsPage() {
                   <h3>{n.titleJa}</h3>
                   <b>{n.titleEn}</b>
                   <p>{n.summaryJa}</p>
+                  {n.easyEn ? (
+                    <div className="easyBox">
+                      <span>EASY ENGLISH / やさしい英語</span>
+                      <p className="easyEn" lang="en">{n.easyEn}</p>
+                      {n.words?.length ? (
+                        <ul className="easyWords">
+                          {n.words.map((w) => <li key={w.en}><b lang="en">{w.en}</b> {w.ja}</li>)}
+                        </ul>
+                      ) : null}
+                    </div>
+                  ) : null}
                   <small>英語の記事を読む / Read in English ↗</small>
                 </a>
               ))}
