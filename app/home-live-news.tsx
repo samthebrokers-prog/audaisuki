@@ -17,6 +17,8 @@ export default async function HomeLiveNews() {
     items = [];
   }
   if (!items.length) return null;
+  // Don't show old news as "NEW" (e.g. while the daily news writer is switched off).
+  if (Date.now() - Date.parse(items[0].publishedAt) > 4 * 86_400_000) return null;
   const [lead, ...rest] = items;
   return (
     <section className="homeNews" aria-label="Latest news">
