@@ -11,6 +11,10 @@ export default function ContactPage() {
         <h1>お問い合わせ / Contact</h1>
         <p className="legalLead">Business listing corrections, community notices, event information and general enquiries are welcome.</p>
         <section>
+          <h2>メール / Email</h2>
+          <p><a href="mailto:info@audaisuki.com"><strong>info@audaisuki.com</strong></a></p>
+        </section>
+        <section>
           <h2>掲載情報の修正 / Listing corrections</h2>
           <p>If you own or manage a business shown on AuDaisuki and something is incorrect, please send the business name, location, the information that needs changing and a public source we can use to verify it.</p>
         </section>
