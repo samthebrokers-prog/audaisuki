@@ -4,9 +4,9 @@ import HomePhrase from "./home-phrase";
 
 const navItems = [
   { ja: "ホーム", en: "Home", href: "#top" },
-  { ja: "仕事", en: "Jobs", href: "/classifieds" },
-  { ja: "住まい", en: "Housing", href: "/classifieds" },
-  { ja: "売買", en: "Buy & Sell", href: "/classifieds" },
+  { ja: "仕事", en: "Jobs", href: "/classifieds?c=parttime" },
+  { ja: "住まい", en: "Housing", href: "/classifieds?c=housing" },
+  { ja: "売買", en: "Buy & Sell", href: "/classifieds?c=sale" },
   { ja: "美容・生活", en: "Beauty & Life", href: "#businesses" },
   { ja: "グルメ", en: "Food", href: "#businesses" },
   { ja: "日系ビジネス", en: "Japanese Business", href: "#companies" },
@@ -49,13 +49,13 @@ const missions = [
 ];
 
 const officialNews = [
-  {date:"2026.09.18",region:"Australia",kind:"募集 / Opportunity",titleJa:"2027年JETプログラム応募受付開始",titleEn:"Applications open for the 2027 JET Programme",source:"在オーストラリア日本国大使館 / Embassy of Japan",href:"https://www.au.emb-japan.go.jp/itpr_en/education_jet_en.html"},
-  {date:"2026.09.11",region:"Australia",kind:"イベント / Events",titleJa:"日豪友好協力基本条約署名50周年イベントカレンダー",titleEn:"50th Anniversary Japan–Australia events calendar",source:"在オーストラリア日本国大使館 / Embassy of Japan",href:"https://www.au.emb-japan.go.jp/itprtop_en/11_000001_02160.html"},
-  {date:"2026.09.01",region:"NT / Darwin",kind:"領事 / Consular",titleJa:"ダーウィン領事出張サービスのお知らせ",titleEn:"Darwin consular outreach service notice",source:"在シドニー日本国総領事館 / Sydney Consulate-General",href:"https://www.sydney.au.emb-japan.go.jp/index_j.htm"},
-  {date:"2026.08.25",region:"NSW / NT",kind:"旅券 / Passport",titleJa:"マイナポータルからのパスポートオンライン申請開始",titleEn:"Online passport applications via Mynaportal",source:"在シドニー日本国総領事館 / Sydney Consulate-General",href:"https://www.sydney.au.emb-japan.go.jp/itpr_ja/my_number_passport.html"},
+  {date:"2026.11.10",region:"Australia",kind:"イベント / Events",titleJa:"日豪友好協力基本条約署名50周年 記念イベントカレンダー（更新）",titleEn:"50th Anniversary Japan–Australia events calendar (updated)",source:"在オーストラリア日本国大使館 / Embassy of Japan",href:"https://www.au.emb-japan.go.jp/itprtop_en/11_000001_02160.html"},
+  {date:"2026.11.10",region:"Australia",kind:"求人 / Jobs",titleJa:"在オーストラリア日本国大使館 職員募集",titleEn:"Employment opportunities at the Embassy of Japan",source:"在オーストラリア日本国大使館 / Embassy of Japan",href:"https://www.au.emb-japan.go.jp/itpr_en/about_employment_opportunity_en.html"},
+  {date:"2026.11.06",region:"Australia",kind:"募集 / Opportunity",titleJa:"2027年JETプログラムの応募受付は終了しました",titleEn:"2027 JET Programme applications have closed",source:"在オーストラリア日本国大使館 / Embassy of Japan",href:"https://www.au.emb-japan.go.jp/itpr_en/education_jet_en.html"},
+  {date:"2026.11.04",region:"Australia",kind:"お知らせ / News",titleJa:"2026年秋の叙勲（オーストラリア関係）",titleEn:"2026 Autumn Conferment of Decorations",source:"在オーストラリア日本国大使館 / Embassy of Japan",href:"https://www.au.emb-japan.go.jp/itpr_en/11_000001_02233.html"},
+  {date:"2026.10.01",region:"Australia",kind:"渡航 / Travel",titleJa:"エミュー及びエミュー製品の日本への持ち込みが動物検疫の対象に",titleEn:"Emus and emu products now subject to Japan's animal quarantine",source:"在オーストラリア日本国大使館 / Embassy of Japan",href:"https://www.au.emb-japan.go.jp/itpr_en/11_000001_02226.html"},
   {date:"2026.09.14",region:"VIC / TAS / SA",kind:"ビザ / Visa",titleJa:"ビザ・渡航情報を更新",titleEn:"Visa & Travel information updated",source:"在メルボルン日本国総領事館 / Melbourne Consulate-General",href:"https://www.melbourne.au.emb-japan.go.jp/itpr_en/consular.html"},
-  {date:"2026.09",region:"QLD",kind:"地域情報 / Community",titleJa:"ブリスベン総領事館「Consulate Updates」9月号",titleEn:"Brisbane Consulate Updates — September issue",source:"在ブリスベン日本国総領事館 / Brisbane Consulate-General",href:"https://www.brisbane.au.emb-japan.go.jp/itpr_en/jicc_newsletters.html"},
-  {date:"2026.09.18",region:"WA / Perth",kind:"日豪交流 / Community",titleJa:"兵庫県・西オーストラリア州 姉妹提携45周年関連訪問",titleEn:"Hyogo–Western Australia sister-state 45th anniversary visit",source:"在パース日本国総領事館 / Perth Consulate-General",href:"https://www.perth.au.emb-japan.go.jp/itpr_en/11_000001_00878.html"},
+  {date:"2026.08.25",region:"NSW / NT",kind:"旅券 / Passport",titleJa:"マイナポータルからのパスポートオンライン申請開始",titleEn:"Online passport applications via Mynaportal",source:"在シドニー日本国総領事館 / Sydney Consulate-General",href:"https://www.sydney.au.emb-japan.go.jp/itpr_ja/my_number_passport.html"},
 ];
 
 const upcomingJapanEvents = [
@@ -67,9 +67,9 @@ const upcomingJapanEvents = [
 const corporateNames=["ANA 全日本空輸","Japan Airlines 日本航空","Mitsubishi Australia 三菱商事","Mitsui & Co. 三井物産","Sumitomo Australia 住友商事","ITOCHU Australia 伊藤忠","Marubeni Australia 丸紅","Sony Australia ソニー","Panasonic Australia パナソニック","MUFG Bank 三菱UFJ銀行","Mizuho Bank みずほ銀行","SMBC 三井住友銀行"];
 
 const communityPathways = [
-  ["💼","求人・仕事","Jobs","仕事情報・求人掲示板を探せます。","/classifieds"],
-  ["🏠","住まい","Housing","シェアハウス・住まい情報の掲示板へ進めます。","/classifieds"],
-  ["🛍️","売ります・買います","Buy & Sell","家具・家電・生活用品などの売買掲示板へ進めます。","/classifieds"],
+  ["💼","求人・仕事","Jobs","仕事情報・求人掲示板を探せます。","/classifieds?c=parttime"],
+  ["🏠","住まい","Housing","シェアハウス・住まい情報の掲示板へ進めます。","/classifieds?c=housing"],
+  ["🛍️","売ります・買います","Buy & Sell","家具・家電・生活用品などの売買掲示板へ進めます。","/classifieds?c=sale"],
   ["🤝","友達・仲間","Friends & Community","各都市の日本人会、学校、日豪交流団体を確認できます。","/locations"],
 ];
 
