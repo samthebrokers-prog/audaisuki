@@ -1,0 +1,57 @@
+/* Pay checker and customs guide (Nov 2026). Matches the .officialHub pages in globals.css. */
+.payChecker{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.payForm{background:#fff;border:1px solid #dfe5ea;border-radius:16px;padding:24px;display:grid;gap:16px}
+.payForm fieldset{border:0;padding:0;margin:0}
+.payForm legend,.payForm label{font-size:14px;font-weight:800;color:#143c68}
+.payForm label{display:grid;gap:7px}
+.segmented{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.segmented button{border:2px solid #dfe5ea;background:#f5f7f9;border-radius:10px;padding:12px;font-weight:800;font-size:14px;cursor:pointer;color:#172033}
+.segmented button.on{border-color:#143c68;background:#eaf4fd;color:#143c68}
+.inputWithUnit{display:flex;align-items:center;border:2px solid #dfe5ea;border-radius:10px;background:#fff;overflow:hidden}
+.inputWithUnit em{font-style:normal;padding:0 12px;color:#657688;font-weight:700;font-size:14px}
+.inputWithUnit input{flex:1;border:0;padding:12px;font-size:18px;min-width:0;outline:none}
+.inputWithUnit:focus-within{border-color:#143c68}
+.payForm .check{display:flex;grid-template-columns:none;align-items:flex-start;gap:9px;font-weight:600;color:#33475b;line-height:1.5}
+.payForm .check input{width:18px;height:18px;margin-top:2px;flex:none}
+.payButton{background:#e23b43;color:#fff;border:0;border-radius:12px;padding:15px;font-size:16px;font-weight:900;cursor:pointer}
+.payButton:hover{background:#c92f37}
+.payError{color:#b42318;font-size:13px;margin:0}
+.payResult{background:#fff;border:1px solid #dfe5ea;border-radius:16px;padding:24px}
+.verdict{border-radius:12px;padding:16px 18px;margin-bottom:16px}
+.verdict strong{font-size:18px;display:block;margin-bottom:6px}
+.verdict p{margin:0;font-size:14px;line-height:1.7}
+.verdict.good{background:#ecfdf3;border:1px solid #abefc6;color:#05603a}
+.verdict.bad{background:#fef3f2;border:1px solid #fecdca;color:#912018}
+.payTable{width:100%;border-collapse:collapse;font-size:14px}
+.payTable th{text-align:left;font-weight:600;color:#465a6d;padding:9px 0;border-bottom:1px solid #eef2f5}
+.payTable td{text-align:right;font-weight:800;color:#172033;padding:9px 0 9px 12px;border-bottom:1px solid #eef2f5}
+.payTable tr.total th,.payTable tr.total td{font-size:17px;color:#143c68;border-bottom:2px solid #143c68}
+.payNext{margin-top:16px;background:#f5f7f9;border-radius:12px;padding:14px 18px;font-size:13px;line-height:1.7}
+.payNext ul{margin:6px 0 0;padding-left:18px}
+.payNext a{color:#143c68;font-weight:800;text-decoration:underline}
+.toolNote{background:#fff;border:1px solid #dfe5ea;border-radius:16px;padding:22px 24px}
+.toolNote h2{font-size:19px!important;margin-top:0!important}
+.toolNote ul{padding-left:18px;margin:0;font-size:13.5px;line-height:1.8;color:#33475b}
+.toolNote li+li{margin-top:6px}
+.sourceList a{color:#143c68;text-decoration:underline}
+.updated{font-size:12px;color:#7e8c99;margin:14px 0 0}
+.toolCrossLink a{display:block;background:#143c68;color:#fff;border-radius:16px;padding:20px 24px;font-size:22px}
+.toolCrossLink b{font-size:17px;margin-left:6px}.toolCrossLink small{display:block;color:#c6d5e2;font-size:12px;margin-top:6px}
+.guideToc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.guideToc a{background:#fff;border:1px solid #dfe5ea;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;color:#143c68}
+.guideSection{background:#fff;border:1px solid #dfe5ea;border-radius:16px;padding:24px 26px;scroll-margin-top:16px}
+.guideSection h2{margin-top:0!important}
+.guideSection p,.guideSection li{font-size:14.5px;line-height:1.85;color:#33475b}
+.guideSection ol,.guideSection ul{padding-left:20px}
+.guideSection li+li{margin-top:7px}
+.guideSection .warn{background:#fff8e6;border:1px solid #f5d27a;border-radius:10px;padding:12px 14px;color:#6a4b00}
+.referralBox{background:linear-gradient(120deg,#0d2945,#143c68);color:#fff;border-radius:18px;padding:28px;scroll-margin-top:16px}
+.referralBox .kicker{color:#ff8f95}
+.referralBox h2{color:#fff!important;margin:6px 0 12px!important}
+.referralBox p{font-size:14.5px;line-height:1.8;color:#e3ecf4;max-width:860px}
+.referralBox .disclosure{font-size:12.5px;color:#c6d5e2;background:#ffffff14;border-radius:10px;padding:10px 12px}
+.referralActions{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.referralActions a{display:block;background:#fff;color:#143c68;border-radius:12px;padding:16px;font-size:20px}
+.referralActions b{display:block;font-size:15px;margin-top:6px}.referralActions small{display:block;color:#657688;font-size:12px;margin-top:3px}
+.referralActions a:hover{background:#eaf4fd}
+@media(max-width:860px){.payChecker{grid-template-columns:1fr}.referralActions{grid-template-columns:1fr}.guideSection{padding:20px}}
