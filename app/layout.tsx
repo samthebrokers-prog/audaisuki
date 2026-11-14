@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import './globals.css';
 import './home-theme.css';
@@ -28,7 +28,10 @@ export const metadata: Metadata = {
     description: 'オーストラリアの日本人コミュニティ向け生活・ビジネス・公式情報ポータル。',
     locale: 'ja_AU',
   },
+  appleWebApp: { capable: true, title: 'AU大好き', statusBarStyle: 'black-translucent' },
 };
+
+export const viewport: Viewport = { themeColor: '#171b20' };
 
 export default function RootLayout({children}:{children:React.ReactNode}) {
   return <html lang="ja"><body>{children}<Script src="/_vercel/insights/script.js" strategy="afterInteractive" /></body></html>;

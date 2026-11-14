@@ -1,6 +1,7 @@
 import LanguageSwitcher from "./LanguageSwitcher";
 import HomeLiveNews from "./home-live-news";
 import HomePhrase from "./home-phrase";
+import HomeAccess from "./home-access";
 
 const navItems = [
   { ja: "ホーム", en: "Home", href: "#top" },
@@ -81,6 +82,7 @@ export default function Home(){return <>
 <main>
 <section className="hero"><div className="heroCopy"><div className="eyebrow">日本人のオーストラリア生活を、もっと身近に。 / Australia, closer to Japan.</div><h1>暮らす。働く。<br/>食べる。つながる。</h1><p className="jp jaOnly">仕事、住まい、生活サービス、日本食、コミュニティ、そして大使館・領事館からの公式情報まで。</p><p className="en enOnly">Jobs, housing, Japanese-speaking services, food, community and official Embassy & Consulate information — all in one place.</p><div className="heroActions"><a href="#businesses" className="primary">日本語サービスを探す <span>Find Japanese services</span></a><a href="#embassy" className="secondary">大使館・領事館 <span>Official contacts</span></a></div></div>
 <aside className="quick"><figure className="quickPhoto"><img src="https://images.unsplash.com/photo-1766323108378-8d101fa9f9ee?auto=format&fit=crop&q=78&w=1200" alt="People dining near the Sydney Opera House in Australia" loading="eager"/><figcaption>🇯🇵 日本とオーストラリアを、もっと近くに。 <span>Japan × Australia</span></figcaption></figure><h2>よく使う情報 <small>Quick access</small></h2><a href="/classifieds">💼 仕事・求人掲示板 <span>Jobs & classifieds</span></a><a href="/classifieds">🏠 住まい・掲示板 <span>Housing & classifieds</span></a><a href="#businesses">✂️ 日本語対応サービス <span>Japanese-speaking</span></a><a href="#embassy">🇯🇵 大使館・領事館 <span>Consular help</span></a><a href="/english">🗣️ 今日のオージー英語 <span>Learn English</span></a><a href="/official-news">📣 公式お知らせ <span>Official notices</span></a></aside></section>
+<HomeAccess/>
 <section className="dailyNeeds" aria-label="Australia life essentials"><div className="dailyNeedsHead"><span className="kicker">AUSTRALIA LIFE / 毎日使う情報</span><h2>オーストラリア生活で、今知りたいこと。</h2><p>ビザ、仕事、住まい、友達、英語、食べる。日本人の「今日必要」にすぐ届く入口です。</p></div><div className="dailyNeedsGrid"><a href="/pay-check"><span>💰</span><b>給料チェック</b><small>Is my pay legal?</small><em>最低賃金と手取りを無料チェック</em></a><a href="/customs-guide"><span>📦</span><b>引越し・通関ガイド</b><small>Moving belongings & vehicles</small><em>家財・車・手荷物の申告</em></a><a href="/official-news"><span>🛂</span><b>ビザ・ワーホリ</b><small>Visa & Working Holiday</small><em>公式・領事情報</em></a><a href="/classifieds?c=parttime"><span>💼</span><b>仕事を探す</b><small>Jobs & local resources</small><em>求人掲示板を見る</em></a><a href="/classifieds?c=housing"><span>🏠</span><b>住まいを探す</b><small>Housing & local life</small><em>地域情報を見る</em></a><a href="/locations"><span>🤝</span><b>友達・仲間</b><small>Friends & Community</small><em>地域団体を探す</em></a><a href="/english"><span>🗣️</span><b>英語・語学交換</b><small>Learn English & Language exchange</small><em>今日のオージー英語</em></a><a href="#businesses"><span>🍜</span><b>日本食・買い物</b><small>Food & Shopping</small><em>店舗・サービス</em></a><a href="#embassy"><span>📣</span><b>大使館・領事館</b><small>Embassy & Consulates</small><em>公式のお知らせ</em></a><a href="/locations"><span>📍</span><b>都市から探す</b><small>Sydney・Melbourne・Brisbane・Perth</small><em>地域情報</em></a></div></section>
 <HomePhrase />
 <HomeLiveNews />
