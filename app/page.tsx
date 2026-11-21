@@ -3,6 +3,9 @@ import HomeLiveNews from "./home-live-news";
 import HomePhrase from "./home-phrase";
 import HomeAccess from "./home-access";
 
+// Rebuild the homepage every 30 minutes so the latest news shows.
+export const revalidate = 1800;
+
 const navItems = [
   { ja: "ホーム", en: "Home", href: "#top" },
   { ja: "仕事", en: "Jobs", href: "/classifieds?c=parttime" },

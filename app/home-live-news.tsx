@@ -26,7 +26,7 @@ export default async function HomeLiveNews() {
           <span className="newFlag">NEW</span>
           <time>{jaDate(lead.publishedAt)}</time>
           <strong>{lead.titleJa}</strong>
-          <b>{lead.titleEn}</b>
+          {lead.titleEn ? <b>{lead.titleEn}</b> : null}
           <small>{lead.tag}</small>
         </a>
         <div className="homeNewsList">
@@ -34,7 +34,7 @@ export default async function HomeLiveNews() {
             <a href="/news" key={n.id}>
               <div><span>{n.tag}</span><time>{jaDate(n.publishedAt)}</time></div>
               <strong>{n.titleJa}</strong>
-              <b>{n.titleEn}</b>
+              {n.titleEn ? <b>{n.titleEn}</b> : null}
               <em>NEW</em>
             </a>
           ))}

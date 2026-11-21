@@ -62,7 +62,7 @@ export default async function NewsPage() {
                     <span>{sourceName(n.source)}</span>
                   </div>
                   <h3>{n.titleJa}</h3>
-                  <b>{n.titleEn}</b>
+                  {n.titleEn ? <b>{n.titleEn}</b> : null}
                   <p>{n.summaryJa}</p>
                   {n.easyEn ? (
                     <div className="easyBox">
@@ -75,7 +75,7 @@ export default async function NewsPage() {
                       ) : null}
                     </div>
                   ) : null}
-                  <small>英語の記事を読む / Read in English ↗</small>
+                  <small>{n.titleEn ? '英語の記事を読む / Read in English ↗' : '元の記事を見る / Open the source ↗'}</small>
                 </a>
               ))}
             </div>
@@ -85,8 +85,8 @@ export default async function NewsPage() {
         <section className="hubDisclaimer">
           <b>ご注意 / Please note</b>
           <p>
-            日本語の要約はAIの補助で作成し、元の英語記事の内容に基づいています。重要な判断の前には、必ず元の記事や公式情報をご確認ください。
-            Japanese summaries are prepared with AI assistance from the original English reports. Always check the original story or official
+            ニュースはSBSの日本語放送、外務省 海外安全ホームページ、オーストラリア政府などの公開情報から自動で集めています。英語の見出しの日本語訳は機械翻訳の場合があります。重要な判断の前には、必ず元の記事や公式情報をご確認ください。
+            News is collected automatically from SBS Japanese, Japan's Ministry of Foreign Affairs and Australian official sources. Japanese versions of English headlines may be machine-translated. Always check the original story or official
             sources before making important decisions.
           </p>
         </section>
