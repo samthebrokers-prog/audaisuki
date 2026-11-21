@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "id": "2026-11-21-whm-visa-rules",
+      "titleJa": "ワーホリ2年目・3年目ビザの申請ルールが変更へ　12月1日から登録受付",
+      "summaryJa": "オーストラリア内務省は11月17日、2年目・3年目のワーキングホリデービザ（サブクラス417・462）の申請方法を変えると発表しました。12月1日から登録の受付が始まり、最初の招待は2027年1月中旬の予定です。2027年3月1日からは、登録して選ばれ、指定労働を終えてから申請する形になります。2年目ビザに必要な指定労働は88日から120日に増えます（3月1日より前の労働も数えられます）。2027年2月28日までに条件を満たして申請すれば、今のルールで申請できます。",
+      "tag": "ビザ / Visa",
+      "titleEn": "Working Holiday Maker visa application rules are changing",
+      "easyEn": "From 1 December 2026 you must register first to get a second or third working holiday visa. Second-visa farm or regional work goes up from 88 to 120 days from 1 March 2027.",
+      "words": [
+        { "en": "register", "ja": "登録する" },
+        { "en": "invitation", "ja": "招待" },
+        { "en": "specified work", "ja": "指定労働（地方での仕事など）" }
+      ],
+      "source": "Department of Home Affairs",
+      "link": "https://www.homeaffairs.gov.au/News-subsite/Pages/2026-Nov/working-holiday-maker-visa-application-rules-are-changing.aspx",
+      "publishedAt": "2026-11-21T12:00:00+11:00"
+    },
+    {
+      "id": "2026-11-21-tiny-tim-steer",
+      "titleJa": "身長192cmの去勢牛「タイニー・ティム」、国内記録更新の可能性",
+      "summaryJa": "体の高さが192cmある去勢牛「タイニー・ティム（小さなティム）」が、オーストラリアで一番大きい牛の記録を破るかもしれないと話題になっています。名前とは反対の大きさに注目が集まっています。",
+      "tag": "話題 / Life",
+      "titleEn": "At 192cm tall, Tiny Tim could be a national cattle record breaker",
+      "easyEn": "A very tall steer called Tiny Tim is 192 centimetres high. He may be the biggest steer in Australia.",
+      "words": [
+        { "en": "steer", "ja": "去勢した雄牛" },
+        { "en": "record breaker", "ja": "記録を破るもの" }
+      ],
+      "source": "ABC News",
+      "link": "https://www.abc.net.au/news/2026-11-21/tiny-tim-could-be-australias-next-biggest-steer/107396504",
+      "publishedAt": "2026-11-21T11:38:00+11:00"
+    },
+    {
+      "id": "2026-11-21-ai-cameras-junior-basketball",
+      "titleJa": "ジュニアバスケの試合にAIカメラ　反対の署名が1万3千人分に",
+      "summaryJa": "子どものバスケットボールの試合でAIカメラを使うことに反対する請願に、1万3千人以上が署名しました。子どもの映像の扱いに心配の声が上がっています。",
+      "tag": "社会 / Society",
+      "titleEn": "Petition against AI cameras at junior basketball attracts 13,000 signatures",
+      "easyEn": "More than 13,000 people signed a petition. They do not want AI cameras filming children's basketball games.",
+      "words": [
+        { "en": "petition", "ja": "請願・署名活動" },
+        { "en": "signature", "ja": "署名" }
+      ],
+      "source": "ABC News",
+      "link": "https://www.abc.net.au/news/2026-11-21/concerns-over-basketball-australia-ai-cameras-junior-games/107406442",
+      "publishedAt": "2026-11-21T10:49:00+11:00"
+    },
+    {
+      "id": "2026-11-21-native-turtles",
+      "titleJa": "オーストラリア固有のカメを守れ　保護プロジェクトが目標に近づく",
+      "summaryJa": "オーストラリアの在来種のカメを増やして守るための保護プロジェクトが進んでいます。大きな節目の達成が近づいていると伝えられています。",
+      "tag": "環境 / Nature",
+      "titleEn": "Hatching a plan to ensure Australia's native turtles survive and thrive",
+      "easyEn": "A project is helping Australia's native turtles. It wants more baby turtles to grow up safely.",
+      "words": [
+        { "en": "native", "ja": "その土地に元からいる（在来の）" },
+        { "en": "thrive", "ja": "元気に育つ・栄える" }
+      ],
+      "source": "ABC News",
+      "link": "https://www.abc.net.au/news/2026-11-21/1-million-turtles-conservation-project-closing-in-on-milestone/107398472",
+      "publishedAt": "2026-11-21T10:32:00+11:00"
+    },
+    {
+      "id": "2026-11-21-married-women-public-service",
+      "titleJa": "既婚女性の公務員禁止が撤廃されて60年　当時の女性たちの「隠れた仕事」",
+      "summaryJa": "オーストラリアでは昔、結婚した女性は公務員として働けませんでした。この禁止がなくなってから60年。当時、女性たちが目立たない形で続けていた仕事が紹介されています。",
+      "tag": "歴史 / History",
+      "titleEn": "The 'covert' work married women did when banned from the public service",
+      "easyEn": "Long ago in Australia, married women could not work for the government. That rule ended 60 years ago.",
+      "words": [
+        { "en": "public service", "ja": "公務員の仕事" },
+        { "en": "ban", "ja": "禁止" }
+      ],
+      "source": "ABC News",
+      "link": "https://www.abc.net.au/news/2026-11-21/60-years-since-ban-married-women-public-service-lifted/107406214",
+      "publishedAt": "2026-11-21T11:17:00+11:00"
+    }
+  ]
+}

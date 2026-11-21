@@ -1,21 +1,13 @@
 // Homepage "Latest news" block: today's Australian news in Japanese,
-// written twice a day by the shared news system (refreshes every 30 min).
-type Item = { id: string; titleJa: string; titleEn: string; tag: string; link: string; publishedAt: string };
-
-const FEED = 'https://www.downundervoices.com/api/audaisuki/news';
+// written daily by the AU大好き news job (refreshes every 30 min).
+import { getNews, type NewsItem } from './news/get-news';
 
 function jaDate(iso: string) {
   return new Intl.DateTimeFormat('ja-JP', { timeZone: 'Australia/Sydney', month: 'numeric', day: 'numeric' }).format(new Date(iso));
 }
 
 export default async function HomeLiveNews() {
-  let items: Item[] = [];
-  try {
-    const r = await fetch(FEED, { next: { revalidate: 1800 } });
-    if (r.ok) items = ((await r.json()) as { items?: Item[] }).items || [];
-  } catch {
-    items = [];
-  }
+  const items: NewsItem[] = await getNews();
   if (!items.length) return null;
   // Don't show old news as "NEW" (e.g. while the daily news writer is switched off).
   if (Date.now() - Date.parse(items[0].publishedAt) > 4 * 86_400_000) return null;

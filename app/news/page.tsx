@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { getNews } from './get-news';
 
 export const metadata: Metadata = {
   title: 'オーストラリアニュース（日本語） | AU大好き',
@@ -7,23 +8,10 @@ export const metadata: Metadata = {
   openGraph: { type: 'website', url: 'https://audaisuki.com/news', siteName: 'AU大好き', title: 'オーストラリアニュース（日本語） | AU大好き', locale: 'ja_AU' },
 };
 
-// Refresh every 30 minutes; the Japanese summaries are written twice a day.
+// Refresh every 30 minutes; the Japanese summaries are written every day.
 export const revalidate = 1800;
 
-type Item = {
-  id: string;
-  titleJa: string;
-  summaryJa: string;
-  tag: string;
-  titleEn: string;
-  easyEn?: string;
-  words?: { en: string; ja: string }[];
-  source: string;
-  link: string;
-  publishedAt: string;
-};
 
-const FEED = 'https://www.downundervoices.com/api/audaisuki/news';
 
 function sourceName(s: string) {
   if (!s.startsWith('http')) return s;
@@ -40,16 +28,6 @@ function jaDate(iso: string) {
   return new Intl.DateTimeFormat('ja-JP', { timeZone: 'Australia/Sydney', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(iso));
 }
 
-async function getNews(): Promise<Item[]> {
-  try {
-    const r = await fetch(FEED, { next: { revalidate: 1800 } });
-    if (!r.ok) return [];
-    const data = (await r.json()) as { items?: Item[] };
-    return data.items || [];
-  } catch {
-    return [];
-  }
-}
 
 export default async function NewsPage() {
   const items = await getNews();
@@ -64,7 +42,7 @@ export default async function NewsPage() {
           <span className="kicker">AUSTRALIA NEWS IN JAPANESE</span>
           <h1>オーストラリアニュース<br /><small>Today&apos;s Australian news, in Japanese</small></h1>
           <p>ワーキングホリデー、留学生、在住の日本人のために、オーストラリアの最新ニュースを毎日日本語でお届けします。</p>
-          <p className="en">Short Japanese summaries of the day&apos;s Australian news, updated twice a day, with an easy-English version, key words, and a link to the full English story.</p>
+          <p className="en">Short Japanese summaries of the day&apos;s Australian news, updated every day, with an easy-English version, key words, and a link to the full English story.</p>
         </div>
 
         <section>
