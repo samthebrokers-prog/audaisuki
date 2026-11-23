@@ -3,7 +3,7 @@
 import { getNews, type NewsItem } from './news/get-news';
 
 function jaDate(iso: string) {
-  return new Intl.DateTimeFormat('ja-JP', { timeZone: 'Australia/Sydney', month: 'numeric', day: 'numeric' }).format(new Date(iso));
+  return new Intl.DateTimeFormat('ja-JP', { timeZone: 'Australia/Sydney', year: 'numeric', month: 'numeric', day: 'numeric' }).format(new Date(iso));
 }
 
 export default async function HomeLiveNews() {
@@ -24,7 +24,7 @@ export default async function HomeLiveNews() {
       <div className="homeNewsGrid">
         <a className="homeNewsLead" href="/news">
           <span className="newFlag">NEW</span>
-          <time>{jaDate(lead.publishedAt)}</time>
+          <time dateTime={lead.publishedAt}>{jaDate(lead.publishedAt)}</time>
           <strong>{lead.titleJa}</strong>
           {lead.titleEn ? <b>{lead.titleEn}</b> : null}
           <small>{lead.tag}</small>
@@ -32,7 +32,7 @@ export default async function HomeLiveNews() {
         <div className="homeNewsList">
           {rest.slice(0, 4).map((n) => (
             <a href="/news" key={n.id}>
-              <div><span>{n.tag}</span><time>{jaDate(n.publishedAt)}</time></div>
+              <div><span>{n.tag}</span><time dateTime={n.publishedAt}>{jaDate(n.publishedAt)}</time></div>
               <strong>{n.titleJa}</strong>
               {n.titleEn ? <b>{n.titleEn}</b> : null}
               <em>NEW</em>
