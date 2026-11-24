@@ -192,3 +192,9 @@ footer{background:#17150f}footer b{color:#f5c400}
 .englishActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px}.englishActions a{display:block;background:#fff;border:1px solid #dfe5ea;border-radius:12px;padding:18px;font-size:20px}.englishActions b{display:block;font-size:16px;color:#143c68;margin-top:6px}.englishActions small{display:block;font-size:12px;color:#687789;margin-top:4px}
 .englishPast>article{background:#fff;border:1px solid #dfe5ea;border-radius:12px;padding:16px}.englishPast h3{font-size:18px;font-family:Georgia,serif}.englishPast p{font-size:13px!important}.englishPast small{font-size:12px!important;color:#687789!important;font-style:italic}
 @media(max-width:760px){.englishActions{grid-template-columns:1fr}.englishToday strong{font-size:30px}}
+
+/* 今日のワーホリ豆知識 */
+.homeTip{margin-top:8px}.homeTip .homePhraseCard{border-left-color:#143c68;background:linear-gradient(135deg,#eef5fc,#fff);border-color:#cfe0f1}
+.homeTipTag{display:inline-block;margin-top:6px;font-size:11px;font-weight:800;color:#143c68;background:#dfeaf6;border-radius:99px;padding:2px 8px}
+.homeTip .homePhraseBody strong.homeTipTitle{font-family:inherit;font-size:21px;line-height:1.35}
+@media(max-width:760px){.homeTip .homePhraseBody strong.homeTipTitle{font-size:18px}}

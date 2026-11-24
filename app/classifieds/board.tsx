@@ -14,6 +14,7 @@ export const CATEGORIES: { id: string; ja: string; en: string; icon: string }[] 
   { id: 'japanese', ja: '日本人を探しています', en: 'Looking for Japanese speakers', icon: '🇯🇵' },
   { id: 'housing', ja: '住まい', en: 'Housing', icon: '🏠' },
   { id: 'sale', ja: '売ります・買います', en: 'Buy & sell', icon: '🛍️' },
+  { id: 'question', ja: 'お助け質問箱', en: 'Q&A — ask the community', icon: '🙋' },
 ];
 
 const REGIONS: [string, string][] = [

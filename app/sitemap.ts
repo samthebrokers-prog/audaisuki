@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/classifieds',
     '/news',
     '/english',
+    '/tips',
     '/pay-check',
     '/customs-guide',
     '/official-news',
